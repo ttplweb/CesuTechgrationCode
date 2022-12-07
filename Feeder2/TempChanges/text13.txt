@@ -1,0 +1,7 @@
+
+[BREAKER SETTING]
+FORMAT_BREAKERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,CoordX,CoordY,ClosedPhase,Locked,RC,NStatus,TCCID,PhPickup,GrdPickup,Alternate,PhAltPickup,GrdAltPickup,FromNodeID,EnableReclosing,FaultIndicator,EnableFuseSaving,MinRatedCurrentForFuseSaving,Automated,SensorMode,Strategic,RestorationMode,ConnectionStatus,ByPassOnRestoration,Speed,SeqOpFirstPhase,SeqOpFirstGround,SeqOpLockoutPhase,SeqOpLockoutGround,SeqResetTime,SeqReclosingTime1,SeqReclosingTime2,SeqReclosingTime3,Reversible
+
+02BS84368-1,S,3P_33KV_1600A_VCB_THE ALLUMINIUM INDUSTRIES LTD,02SG8,,0,0,,,ABC,0,0,0,DEFAULT,0,0,0,0,0,02SG8,1,1,0,0,0,0,0,0,0,0,0,2,2,4,4,30,2,2,2,1
+02BS84370-1,S,3P_33KV_1600A_VCB_,02SG36,,0,0,,,ABC,0,0,0,DEFAULT,0,0,0,0,0,02SG36,1,1,0,0,0,0,0,0,0,0,0,2,2,4,4,30,2,2,2,1
+02BS84373-1,S,3P_33KV_1600A_VCB_THE ALLUMINIUM INDUSTRIES LTD,02SG7,,0,0,,,ABC,0,0,0,DEFAULT,0,0,0,0,0,02SG7,1,1,0,0,0,0,0,0,0,0,0,2,2,4,4,30,2,2,2,1

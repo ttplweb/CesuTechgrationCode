@@ -1,0 +1,17 @@
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\bin\Debug\TechGration.exe.config
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\bin\Debug\TechGration.exe
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\bin\Debug\TechGration.pdb
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.Properties.Resources.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.csproj.GenerateResource.cache
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.csproj.CoreCompileInputs.cache
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.exe
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.pdb
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.TechgrationConfiguration.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.TechgrationProcess.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.TechgrationWaiting.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.TechgrationProcessForFour.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.TechgrationProcessForOne.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.TechgrationProcessForThree.resources
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.csproj.AssemblyReference.cache
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\bin\Debug\MaterialSkin.dll
+D:\Nishant\CESU Project\Nishant\TechGration\TechGration\obj\Debug\TechGration.csproj.CopyComplete

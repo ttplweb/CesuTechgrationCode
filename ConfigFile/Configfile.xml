@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<Connection>
+  <GIS_Database>
+    <Server>192.168.1.84</Server>
+    <Username>sa</Username>
+    <Password>ttpl@987</Password>
+    <DataBase_Name>tpcentralodisha</DataBase_Name>
+    <Database_Type>SDE</Database_Type>
+    <Schema_Name>dbo</Schema_Name>
+    <SDEPath>sde:sqlserver:172.18.0.17\CESU</SDEPath>
+  </GIS_Database>
+  <Network_Database>
+    <Net_Server>192.168.1.84</Net_Server>
+    <Net_Database>CYME_NET</Net_Database>
+    <Net_Username>sa</Net_Username>
+    <Net_Password>ttpl@987</Net_Password>
+  </Network_Database>
+  <Mdas>
+    <Mdas_Server>192.168.1.84</Mdas_Server>
+    <Mdas_Database>CYME_TechGration</Mdas_Database>
+    <Mdas_Username>sa</Mdas_Username>
+    <Mdas_Password>ttpl@987</Mdas_Password>
+  </Mdas>
+  <TechGration>
+    <TG_Server>192.168.1.84</TG_Server>
+    <TG_Database>CYME_TechGration</TG_Database>
+    <TG_Username>sa</TG_Username>
+    <TG_Password>ttpl@987</TG_Password>
+  </TechGration>
+  <Equipment_Database>
+    <Server>192.168.1.84</Server>
+    <Database>CYME_EQP</Database>
+    <Username>sa</Username>
+    <Password>ttpl@987</Password>
+  </Equipment_Database>
+  <Text_Record>
+    <XML_PATH>E:\TECHGRATION\CESU\Tech-Gration\ConfigFile\Configfile.xml</XML_PATH>
+    <FMECYMDIST>E:\Deepak Mails\Desktop\errorlog</FMECYMDIST>
+    <CYMDIST>C:\CYME</CYMDIST>
+    <Error_Log>D:\Nishant\CESU Project\Nishant\error</Error_Log>
+    <Residential>0.85</Residential>
+    <Industrial>0.90</Industrial>
+    <FeederProcessCount>1</FeederProcessCount>
+  </Text_Record>
+  <ExtractionType>
+    <Type>Manual</Type>
+  </ExtractionType>
+  <CymDatabaseAccess>
+    <Network>E:\TECHGRATION\AdaniElectricityMumbai\Database\n.mdb</Network>
+    <Equipment>E:\TECHGRATION\AdaniElectricityMumbai\Database\e.mdb</Equipment>
+  </CymDatabaseAccess>
+  <CymDatabaseType>
+    <Type>MSSQL</Type>
+  </CymDatabaseType>
+</Connection>

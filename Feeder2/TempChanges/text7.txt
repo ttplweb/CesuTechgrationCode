@@ -1,0 +1,8 @@
+
+[UNDERGROUNDLINE SETTING]
+FORMAT_UNDERGROUNDLINESETTING=SectionID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,LineCableID,Length,NumberOfCableInParallel,Amps,Amps_1,Amps_2,Amps_3,Amps_4,ConnectionStatus,CoordX,CoordY,HarmonicModel,EarthResistivity,OperatingTemperature,Height,DistanceBetweenConductors,BondingType,CableConfiguration,DuctMaterial,Bundled,Neutral1Type,Neutral2Type,Neutral3Type,Neutral1ID,Neutral2ID,Neutral3ID,AmpacityDeratingFactor,FlowConstraintActive,FlowConstraintUnit,MaximumFlow
+
+02LC151103,02LC151103,,0,0,3P_0.11KV_6C_2.5SQMM_PVC_Copper,1.603381,1,0,0,0,0,0,0,,,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+02LC151072,02LC151072,,0,0,3P_0.11KV_6C_2.5SQMM_PVC_Copper,0.2473952,1,0,0,0,0,0,0,,,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+02LC151079,02LC151079,,0,0,3P_0.11KV_6C_2.5SQMM_PVC_Copper,1.60323,1,0,0,0,0,0,0,,,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+02LC151525,02LC151525,,0,0,1P_0.24KV_2C_2.5SQMM_PVC_Copper,1.250963,1,0,0,0,0,0,0,,,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100

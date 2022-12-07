@@ -1,0 +1,5 @@
+
+[SOURCE]
+FORMAT_SOURCE=SourceID,DeviceNumber,NodeID,NetworkID,OperatingVoltageA,OperatingVoltageB,OperatingVoltageC,SinglePhaseCenterTap,CenterTapPhase
+
+17001-132/33 kV MANCHESWAR SS_33KV,17001-132/33 kV MANCHESWAR SS,378109.43_2247739.3,02/17001/404,0,0,0,0,0

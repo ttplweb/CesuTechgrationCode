@@ -1,0 +1,6 @@
+[GENERAL]
+DATE=November 18, 2022 at 16:21:06
+CYME_VERSION=8.00
+CYMDIST_REVISION=01
+              
+[SI]

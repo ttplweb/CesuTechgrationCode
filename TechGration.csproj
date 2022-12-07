@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD96A265-C0EE-44EA-A6AB-3608AFB3E29E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TechGration</RootNamespace>
+    <AssemblyName>TechGration</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\Batch.cs" />
+    <Compile Include="AppCode\Common.cs" />
+    <Compile Include="AppCode\ConfigFileData.cs" />
+    <Compile Include="AppCode\ConsumerNo.cs" />
+    <Compile Include="AppCode\CymeFileCreate.cs" />
+    <Compile Include="AppCode\ErrorLog.cs" />
+    <Compile Include="AppCode\Extraclass.cs" />
+    <Compile Include="AppCode\FMEFileCreate.cs" />
+    <Compile Include="AppCode\gettab.cs" />
+    <Compile Include="AppCode\HeadNode.cs" />
+    <Compile Include="AppCode\Loadtxt.cs" />
+    <Compile Include="AppCode\MeterDemand.cs" />
+    <Compile Include="AppCode\Networktxt.cs" />
+    <Compile Include="AppCode\Replace.cs" />
+    <Compile Include="AppCode\SelectedFeederList.cs" />
+    <Compile Include="AppCode\SetAllLocation.cs" />
+    <Compile Include="AppCode\Switch.cs" />
+    <Compile Include="AppCode\updateFromToNode.cs" />
+    <Compile Include="TechgrationProcessForOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechgrationProcessForOne.Designer.cs">
+      <DependentUpon>TechgrationProcessForOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechgrationProcessForThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechgrationProcessForThree.Designer.cs">
+      <DependentUpon>TechgrationProcessForThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechgrationProcessForFour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechgrationProcessForFour.Designer.cs">
+      <DependentUpon>TechgrationProcessForFour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechgrationWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechgrationWaiting.Designer.cs">
+      <DependentUpon>TechgrationWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TechgrationProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechgrationProcess.Designer.cs">
+      <DependentUpon>TechgrationProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechgrationConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechgrationConfiguration.Designer.cs">
+      <DependentUpon>TechgrationConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TechgrationConfiguration.resx">
+      <DependentUpon>TechgrationConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechgrationProcess.resx">
+      <DependentUpon>TechgrationProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechgrationProcessForFour.resx">
+      <DependentUpon>TechgrationProcessForFour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechgrationProcessForOne.resx">
+      <DependentUpon>TechgrationProcessForOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechgrationProcessForThree.resx">
+      <DependentUpon>TechgrationProcessForThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TechgrationWaiting.resx">
+      <DependentUpon>TechgrationWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Feeder1\" />
+    <Folder Include="Feeder2\" />
+    <Folder Include="Feeder3\" />
+    <Folder Include="Feeder4\" />
+    <Folder Include="Feeder\" />
+    <Folder Include="SDE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigFile\Configfile.xml" />
+    <Content Include="Image\download.png" />
+    <Content Include="Image\gif.gif" />
+    <Content Include="Image\gif1.gif" />
+    <Content Include="Image\images.png" />
+    <Content Include="Image\load.gif" />
+    <Content Include="Image\loading2.gif" />
+    <Content Include="Image\loading5.gif" />
+    <Content Include="Image\show.gif" />
+    <Content Include="Image\tech6.png" />
+    <Content Include="Image\TechGration.ico" />
+    <Content Include="Image\techlabs1.png" />
+    <Content Include="Image\techlabs2.png" />
+    <Content Include="Image\techlabs_.PNG" />
+    <Content Include="Image\techlabs_logo.PNG" />
+    <Content Include="Image\tenor.gif" />
+    <Content Include="Image\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

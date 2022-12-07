@@ -1,0 +1,6 @@
+
+[INTERMEDIATE NODES]
+FORMAT_INTERMEDIATENODE=SectionID,SeqNumber,CoordX,CoordY,IsBreakPoint,BreakPointLocation
+               
+02HL16,0,378184.75,2245199.0,,
+02HL9,0,379020.52,2244744.7,,
