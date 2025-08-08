@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,12 +35,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GeoAPI.CoordinateSystems, Version=1.7.5.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoAPI.CoordinateSystems.1.7.5\lib\net45\GeoAPI.CoordinateSystems.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="NetTopologySuite.CoordinateSystems, Version=1.15.3.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetTopologySuite.CoordinateSystems.1.15.3\lib\net45\NetTopologySuite.CoordinateSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Diagnostics.Process, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Process.4.3.0\lib\net461\System.Diagnostics.Process.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,23 +82,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCode\Batch.cs" />
+    <Compile Include="AppCode\Consumer_DataAPI.cs" />
+    <Compile Include="AppCode\Create_GIS_Table.cs" />
     <Compile Include="AppCode\Common.cs" />
     <Compile Include="AppCode\ConfigFileData.cs" />
     <Compile Include="AppCode\ConsumerNo.cs" />
     <Compile Include="AppCode\CymeFileCreate.cs" />
     <Compile Include="AppCode\ErrorLog.cs" />
-    <Compile Include="AppCode\Extraclass.cs" />
-    <Compile Include="AppCode\FMEFileCreate.cs" />
-    <Compile Include="AppCode\gettab.cs" />
+    <Compile Include="AppCode\GetAllData.cs" />
+    <Compile Include="AppCode\GetAllDeviceData.cs" />
     <Compile Include="AppCode\HeadNode.cs" />
+    <Compile Include="AppCode\Insert_TG-Data.cs" />
     <Compile Include="AppCode\Loadtxt.cs" />
     <Compile Include="AppCode\MeterDemand.cs" />
+    <Compile Include="AppCode\MeterProfile_DataAPI.cs" />
     <Compile Include="AppCode\Networktxt.cs" />
+    <Compile Include="AppCode\OlebdDataAdapter.cs" />
+    <Compile Include="AppCode\PTRLoad.cs" />
     <Compile Include="AppCode\Replace.cs" />
     <Compile Include="AppCode\SelectedFeederList.cs" />
     <Compile Include="AppCode\SetAllLocation.cs" />
     <Compile Include="AppCode\Switch.cs" />
+    <Compile Include="AppCode\TechError.cs" />
     <Compile Include="AppCode\updateFromToNode.cs" />
+    <Compile Include="AppCode\UpdatedeviceLocation.cs" />
+    <Compile Include="AppCode\MeterProfile_Data.cs" />
+    <Compile Include="UTM.cs" />
+    <Compile Include="GIS_RECORD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIS_RECORD.Designer.cs">
+      <DependentUpon>GIS_RECORD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeterProfileProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeterProfileProcess.Designer.cs">
+      <DependentUpon>MeterProfileProcess.cs</DependentUpon>
+    </Compile>
     <Compile Include="TechgrationProcessForOne.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +163,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GIS_RECORD.resx">
+      <DependentUpon>GIS_RECORD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeterProfileProcess.resx">
+      <DependentUpon>MeterProfileProcess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TechgrationConfiguration.resx">
       <DependentUpon>TechgrationConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,14 +216,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ConfigFile\Configfile.xml" />
+    <Content Include="ConfigFile\GeoJsonServerUrl.xml" />
+    <Content Include="ConfigFile\GIS_Table.xml" />
     <Content Include="Image\download.png" />
+    <None Include="Image\favicon %2810%29.ico" />
     <Content Include="Image\gif.gif" />
     <Content Include="Image\gif1.gif" />
     <Content Include="Image\images.png" />
     <Content Include="Image\load.gif" />
     <Content Include="Image\loading2.gif" />
     <Content Include="Image\loading5.gif" />
+    <None Include="Image\open_folder_yellow.png" />
     <Content Include="Image\show.gif" />
+    <Content Include="Image\spinloader.gif" />
     <Content Include="Image\tech6.png" />
     <Content Include="Image\TechGration.ico" />
     <Content Include="Image\techlabs1.png" />
@@ -179,4 +242,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Esri.ArcGISRuntime.runtimes.win.200.4.0\build\net472\Esri.ArcGISRuntime.runtimes.win.targets" Condition="Exists('..\packages\Esri.ArcGISRuntime.runtimes.win.200.4.0\build\net472\Esri.ArcGISRuntime.runtimes.win.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Esri.ArcGISRuntime.runtimes.win.200.4.0\build\net472\Esri.ArcGISRuntime.runtimes.win.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Esri.ArcGISRuntime.runtimes.win.200.4.0\build\net472\Esri.ArcGISRuntime.runtimes.win.targets'))" />
+    <Error Condition="!Exists('..\packages\Esri.ArcGISRuntime.200.4.0\build\net472\Esri.ArcGISRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Esri.ArcGISRuntime.200.4.0\build\net472\Esri.ArcGISRuntime.targets'))" />
+  </Target>
+  <Import Project="..\packages\Esri.ArcGISRuntime.200.4.0\build\net472\Esri.ArcGISRuntime.targets" Condition="Exists('..\packages\Esri.ArcGISRuntime.200.4.0\build\net472\Esri.ArcGISRuntime.targets')" />
 </Project>

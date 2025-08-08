@@ -1,0 +1,7 @@
+
+[RECLOSER SETTING]
+FORMAT_RECLOSERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,CoordX,CoordY,ClosedPhase,Locked,RC,NStatus,TCCID,PhPickup,GrdPickup,Alternate,PhAltPickup,GrdAltPickup,FromNodeID,EnableReclosing,FaultIndicator,EnableFuseSaving,MinRatedCurrentForFuseSaving,Automated,SensorMode,Strategic,RestorationMode,ConnectionStatus,TCCRepositoryID,TCCRepositoryAlternateID1,TCCRepositoryAlternateID2,TCCRepositoryAlternateID3,TCCRepositoryAlternateID4,TCCRepositoryAlternateID5,TCCRepositoryAlternateID6,TCCRepositoryAlternateID7,TCCRepositoryAlternateID8,TCCRepositoryAlternateID9,TCCRepositoryAlternateID10,IntellirupterTCCRepositoryID,ByPassOnRestoration,Reversible,TCCSettingsSelection
+
+OH_10609,L,22 KV_630A,RC_4105,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_11453,S,22 KV_630A,RC_4181,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_10487,S,22 KV_800A,RC_4094,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0

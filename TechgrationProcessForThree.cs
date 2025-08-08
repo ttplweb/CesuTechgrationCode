@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,6 +22,7 @@ namespace TechGration
         private void timer1_Tick(object sender, EventArgs e)
         {
             feed();
+           // savewebstatus();
             DateTime date = DateTime.Now;
             lblTime.Text = date.ToString("hh:mm:ss tt");
         }
@@ -71,6 +73,7 @@ namespace TechGration
             this.timer1.Start();
             this.Refresh();
             feed();
+           // savewebstatus();
             if (!backgroundWorker1.IsBusy)
             {
                 backgroundWorker1.RunWorkerAsync();
@@ -85,7 +88,7 @@ namespace TechGration
             per = (((a * 100) / b));
             return per;
         }
-
+         
         public string feed()
         {
             try
@@ -110,15 +113,16 @@ namespace TechGration
                 lblStatus1.Text = TechgrationConfiguration.Status1;
                 lblStatus2.Text = TechgrationConfiguration.Status2;
                 lblStatus3.Text = TechgrationConfiguration.Status3;
-                labdivision1.Text = "Division        :   " + TechgrationConfiguration.Division1;
-                labdivision2.Text = "Division        :   " + TechgrationConfiguration.Division2;
-                labdivision3.Text = "Division        :   " + TechgrationConfiguration.Division3;
+                labdivision1.Text = "Division        :   " + "HPC";
+                labdivision2.Text = "Division        :   " + "HPC";
+                labdivision3.Text = "Division        :   " + "HPC";
                 labSubstation1.Text = "Substation    :   " + TechgrationConfiguration.Substation1;
                 labSubstation2.Text = "Substation    :   " + TechgrationConfiguration.Substation2;
                 labSubstation3.Text = "Substation    :   " + TechgrationConfiguration.Substation3;
-                labFeederID1.Text = "FeederID      :   " + TechgrationConfiguration.FeederID1;
-                labFeederID2.Text = "FeederID      :   " + TechgrationConfiguration.FeederID2;
-                labFeederID3.Text = "FeederID      :   " + TechgrationConfiguration.FeederID3;
+
+                labFeederID1.Text = "FeederID      :   " + TechgrationConfiguration.FeederID1 ;
+                labFeederID2.Text = "FeederID      :   " + TechgrationConfiguration.FeederID2 ;
+                labFeederID3.Text = "FeederID      :   " + TechgrationConfiguration.FeederID3 ;
                 labFeederName1.Text = "Feeder Name :  " + TechgrationConfiguration.FeederName1;
                 labFeederName2.Text = "Feeder Name :  " + TechgrationConfiguration.FeederName2;
                 labFeederName3.Text = "Feeder Name :  " + TechgrationConfiguration.FeederName3;

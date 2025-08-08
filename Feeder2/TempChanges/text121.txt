@@ -1,0 +1,294 @@
+
+[DEVICEUDD]
+FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
+DT_805,5,DTCName,8,Cổ Bi 3
+DT_806,5,DTCName,8,ĐC Sơn Bồ
+DT_807,5,DTCName,8,MBA CNX Phú Hải
+DT_809,5,DTCName,8,Bắc Triều Vịnh
+DT_810,5,DTCName,8,MBA Bồ Điền 1
+DT_811,5,DTCName,8,MBA Phe tư
+DT_812,5,DTCName,8,MBA Nam Sơn
+DT_813,5,DTCName,8,MBA Thượng An 5
+DT_820,5,DTCName,8,MBA Cổ Bi 4
+DT_822,5,DTCName,8,MBA Mặt Trời Huế
+DT_823,5,DTCName,8,MBA An Lỗ 2
+DT_826,5,DTCName,8,MBA Cao Ban
+DT_830,5,DTCName,8,MBA Cao ban 2
+DT_831,5,DTCName,8,MBA Đồng Lâm 4
+DT_832,5,DTCName,8,MBA Bắc Hiền 4
+DT_842,5,DTCName,8,MBA Trang Trại Phong Sơn 1
+DT_845,5,DTCName,8,MBA Trang Trại Triều Dương
+DT_847,5,DTCName,8,MBA Đồng Lâm 3
+DT_850,5,DTCName,8,MBA Bồ Điền 4
+DT_856,5,DTCName,8,MBA Bắc Hiền 5
+DT_861,5,DTCName,8,MBA Phú Quảng Điền
+DT_862,5,DTCName,8,MBA Bắc Sơn
+DT_863,5,DTCName,8,MBA  TC Thành Phát
+DT_869,5,DTCName,8,MBA Tây Sơn 3
+DT_870,5,DTCName,8,MBA Hoàng Bằng Mới
+DT_873,5,DTCName,8,MBA Ga hiền sỹ
+DT_874,5,DTCName,8,MBA Nam Lợi
+DT_875,5,DTCName,8,MBA Sơn Quả
+DT_879,5,DTCName,8,MBA Bơm Tăng áp Đồng Lâm
+DT_880,5,DTCName,8,MBA Hiền Lương 2
+DT_882,5,DTCName,8,MBA Đông Dạ
+DT_886,5,DTCName,8,MBA Thượng An 4
+DT_887,5,DTCName,8,MBA Lâm Nghiệp 1-5
+DT_892,5,DTCName,8,MBA Cao Ban 3
+DT_898,5,DTCName,8,MBA Đông An
+DT_902,5,DTCName,8,MBA Phú Phong Điền
+DT_904,5,DTCName,8,MBA Nam Sơn 3
+DT_907,5,DTCName,8,MBA Lý Quốc Hưng
+DT_908,5,DTCName,8,MBA Trang Trại Phong Sơn 2
+DT_920,5,DTCName,8,MBA Gạch 1.5
+DT_923,5,DTCName,8,MBA BV Đa Khoa 1
+DT_932,5,DTCName,8,MBA Bơm tây Sơn
+DT_934,5,DTCName,8,MBA Sơn Tùng
+DT_938,5,DTCName,8,MBA Cổ Bi 2
+DT_940,5,DTCName,8,VP Điện lực Phong Điền
+DT_941,5,DTCName,8,MBA Bắc Hiền 3
+DT_943,5,DTCName,8,MBA Bơm Phong Hiền
+DT_957,5,DTCName,8,MBA Phò Ninh 2
+DT_967,5,DTCName,8,MBA Sơn Tùng 2
+DT_976,5,DTCName,8,MBA Gia Viên
+DT_978,5,DTCName,8,MBA Tinh Bột Sắn T2
+DT_979,5,DTCName,8,MBA Tinh Bột Sắn T1
+DT_986,5,DTCName,8,MBA BV Đa khoa Phong An 2 mới
+DT_989,5,DTCName,8,MBA An Lỗ
+DT_991,5,DTCName,8,MBA Công Nghệ Xanh PT
+DT_996,5,DTCName,8,MBA Bồ Điền 2
+DT_997,5,DTCName,8,Nam Sơn 2
+DT_1003,5,DTCName,8,MBA Bơm Phong An
+DT_1004,5,DTCName,8,MBA UB xã Phong hiền
+DT_1007,5,DTCName,8,MBA Phú Lễ 1
+DT_1008,5,DTCName,8,MBA Nhà máy NK Thanh Tân
+DT_1010,5,DTCName,8,MBA Bình Minh Huế
+DT_1015,5,DTCName,8,MBA Bồ Điền 3
+DT_1018,5,DTCName,8,MBA Phúc Thịnh
+DT_1019,5,DTCName,8,MBA  AGGY
+DT_1022,5,DTCName,8,MBA Bắc Hiền 2 mới
+DT_1023,5,DTCName,8,MBA Bắc Hiền 1
+DT_1024,5,DTCName,8,MBA Trạm sạc Vinfast
+DT_1027,5,DTCName,8,MBA PRENIUM SILICA
+DT_1030,5,DTCName,8,MBA Cổ Bi 1
+DT_1036,5,DTCName,8,MBA Phò Ninh 1
+DT_1037,5,DTCName,8,MBA Thượng an 2
+DT_1038,5,DTCName,8,Thượng An 3
+DT_1039,5,DTCName,8,MBA Hiền Lương 1
+DT_1042,5,DTCName,8,MBA Thượng An 1
+DT_1048,5,DTCName,8,MBA Bơm Phong Sơn
+DT_1050,5,DTCName,8,MBA Tây Sơn 1
+DT_1052,5,DTCName,8,MBA Phò Ninh 3
+DT_1054,5,DTCName,8,Phò Ninh 4
+DT_2018,5,DTCName,8,MBA Nghĩa Lộ
+DT_2025,5,DTCName,8,MBA Xuân Tùy 2
+DT_2044,5,DTCName,8,MBA Bao La
+DT_2048,5,DTCName,8,MBA Đông Vinh 1
+DT_2056,5,DTCName,8,MBA Bát Vọng Tây
+DT_2057,5,DTCName,8,MBA Bắc Vinh 1
+DT_2060,5,DTCName,8,MBA Phú Lễ 2
+DT_2073,5,DTCName,8,MBA Hạ Cảng
+DT_2074,5,DTCName,8,MBA Bắc Vinh 3
+DT_2076,5,DTCName,8,MBA Ủy Ban Quảng Phú
+DT_2122,5,DTCName,8,MBA Trung tâm Y Tế
+DT_2132,5,DTCName,8,MBA Xuân Tùy 1
+DT_2133,5,DTCName,8,MBA Lúa Nam Vinh
+DT_2135,5,DTCName,8,MBA Bác Vọng
+DT_2152,5,DTCName,8,MBA Quảng Điền 1
+DT_2175,5,DTCName,8,MBA Trạm Sạc Vinfast Quảng Phú
+DT_2179,5,DTCName,8,MBA Hạ Lang
+DT_2184,5,DTCName,8,MBA-Đông vinh 3
+DT_2186,5,DTCName,8,MBA Nghĩa Lộ 2
+DT_2200,5,DTCName,8,MBA-Đông Vinh 5
+DT_2215,5,DTCName,8,MBA Nam Vinh 5
+DT_2216,5,DTCName,8,MBA Đông Vinh 2
+DT_2218,5,DTCName,8,MBA Nam Vinh 1
+DT_2234,5,DTCName,8,MBA Nam Vinh 3 (RD)
+DT_2237,5,DTCName,8,MBA Chợ Quảng Phú
+DT_2241,5,DTCName,8,MBA-Đức Nhuận ( Re 2)
+DT_2276,5,DTCName,8,MBA Đông Vinh 8
+DT_2281,5,DTCName,8,MBA Đông Vinh 1 (RD)
+DT_2285,5,DTCName,8,MBA Nam Vinh 3
+DT_2290,5,DTCName,8,MBA Bơm Vinh Phú
+DT_2291,5,DTCName,8,MBA Bắc Vinh 2
+DT_2302,5,DTCName,8,MBA Nam Vinh 2
+DT_2303,5,DTCName,8,MBA Đông Vinh 7
+FU_1816,14,DTCName,8,Bộ FCO Bồ Điền 4
+FU_1827,14,DTCName,8,Bộ FCO TBA Phú Lễ 1
+FU_1843,14,DTCName,8,Bộ FCO TBA AGGY
+FU_1845,14,DTCName,8,Bộ FCO 473-7/107 BV Phong An
+FU_1846,14,DTCName,8,Bộ FCO 473-7/107/7 BV Phong An
+FU_1853,14,DTCName,8,Bộ FCO 473-7/39/18 Bơm Phong An
+FU_1854,14,DTCName,8,Bộ FCO 471-7/19/3A Thượng An 5
+FU_1855,14,DTCName,8,Bộ FCO 471-7/19 Bơm Phò Ninh
+FU_1859,14,DTCName,8,Bộ FCO 473-7/97 rẽ Thượng An 3
+FU_1863,14,DTCName,8,Bộ FCO TBA Thượng An 1
+FU_1870,14,DTCName,8,Bộ FCO 471-7/60/1 Nam Sơn 2
+FU_1875,14,DTCName,8,Bộ FCO TBA Phúc Thịnh
+FU_1881,14,DTCName,8,Bộ FCO TBA Nhà máy NK Thanh Tân
+FU_1883,14,DTCName,8,Bộ FCO 471-7/81 Nam Sơn 3
+FU_1909,14,DTCName,8,Bộ FCO TBA Bắc Triều Vịnh
+FU_1915,14,DTCName,8,Bộ FCO TBA Hoàng Bằng
+FU_1916,14,DTCName,8,Bộ FCO TBA Ga hiền sỹ
+FU_1917,14,DTCName,8,Bộ FCO TBA UB Xã Phong Hiền
+FU_1927,14,DTCName,8,Bộ FCO TBA Đồng Lâm 3
+FU_1934,14,DTCName,8,Bộ FCO 472-7/118A/31 Trang Trại Triều Dương
+FU_1937,14,DTCName,8,Bộ FCO TBA Bình Minh Huế
+FU_1942,14,DTCName,8,Bộ FCO TBA Cổ Bi 4
+FU_1944,14,DTCName,8,Bộ FCO 471-7/40 Phò Ninh
+FU_1955,14,DTCName,8,Bộ FCO TBA CNX Phú Hải
+FU_1958,14,DTCName,8,Bộ FCO rẽ Cao Ban 2
+FU_1961,14,DTCName,8,Bộ FCO 471-7/174/1 Sơn Quả
+FU_1963,14,DTCName,8,Bộ FCO TBA Tinh Bột Sắn T1
+FU_1967,14,DTCName,8,Bộ FCO TBA Phú Quảng Điền
+FU_1968,14,DTCName,8,Bộ FCO 473-7/20/4 Tinh bột sắn
+FU_1969,14,DTCName,8,Bộ FCO 471-7/96 Cổ Bi 1
+FU_1970,14,DTCName,8,Bộ FCO 472-7/2 Thượng An
+FU_1971,14,DTCName,8,Bộ FCO 471-7/70/4 Sơn Tùng
+FU_1973,14,DTCName,8,Bộ FCO TBA Lý Quốc Hưng
+FU_1974,14,DTCName,8,Bộ FCO 472-7/15/1A Bơm Phong Hiền
+FU_1975,14,DTCName,8,Bộ FCO 472-7/30/1 Phú Lễ 1
+FU_1981,14,DTCName,8,Bộ FCO TBA Thượng An 5
+FU_1988,14,DTCName,8,Bộ FCO TBA Trang trại Phong Sơn 1
+FU_1994,14,DTCName,8,Bộ FCO TBA Bơm Tây Sơn
+FU_2016,14,DTCName,8,Bộ FCO TBA Lâm Nghiệp 1-5
+FU_2047,14,DTCName,8,Bộ FCO TBA Hiền Lương 2
+FU_2067,14,DTCName,8,Bộ FCO TBA Cao Ban 3
+FU_2068,14,DTCName,8,Bộ FCO TBA Sơn Tùng 2
+FU_2070,14,DTCName,8,Bộ FCO TBA Nam Sơn 2
+FU_2071,14,DTCName,8,Bộ FCO TBA Sơn Tùng
+FU_2074,14,DTCName,8,Bộ FCO 471-7/180/1 Bắc Sơn
+FU_2075,14,DTCName,8,Bộ FCO TBA Tinh Bột Sắn T2
+FU_2082,14,DTCName,8,Bộ FCO An Lỗ 2
+FU_2089,14,DTCName,8,Bộ FCO 471-7/18 Thượng An 1
+FU_2094,14,DTCName,8,Bộ FCO TBA Bơm Phong An
+FU_2095,14,DTCName,8,Bộ FCO TBA Cổ Bi 2
+FU_2099,14,DTCName,8,Bộ FCO TBA Thượng an 2
+FU_2105,14,DTCName,8,Bộ FCO TBA Đồng Lâm 4
+FU_2106,14,DTCName,8,Bộ FCO TBA Phò Ninh 1
+FU_2107,14,DTCName,8,Bộ FCO TBA Phò Ninh 4
+FU_2108,14,DTCName,8,Bộ FCO TBA Phe tư
+FU_2114,14,DTCName,8,Bộ FCO TBA Bơm Tăng áp Đồng Lâm
+FU_2115,14,DTCName,8,Bộ FCO TBA Sơn Bồ
+FU_2116,14,DTCName,8,Bộ FCO TBA Đông Dạ
+FU_2118,14,DTCName,8,Bộ FCO TBA Tây Sơn 1
+FU_2123,14,DTCName,8,Bộ FCO TBA Bắc Hiền 3
+FU_2125,14,DTCName,8,Bộ FCO TBA Cao Ban
+FU_2126,14,DTCName,8,Bộ FCO TBA Cổ Bi 3
+FU_2128,14,DTCName,8,Bộ FCO TBA Thượng An 3
+FU_2129,14,DTCName,8,Bộ FCO TBA Phò Ninh 3
+FU_2133,14,DTCName,8,Bộ FCO TBA Trang Trại Triều Dương
+FU_2135,14,DTCName,8,Bộ FCO TBA BV Đa Khoa Phong An 1
+FU_2136,14,DTCName,8,Bộ FCO TBA Hiền Lương 1
+FU_2138,14,DTCName,8,Bộ FCO TBA Thượng An 4
+FU_2141,14,DTCName,8,Bộ FCO TBA Gạch 1.5
+FU_2146,14,DTCName,8,Bộ FCO 471-7/93/1 Phe Tư
+FU_2147,14,DTCName,8,Bộ FCO 472-7/15 Bơm Phong Hiền
+FU_2153,14,DTCName,8,Bộ FCO 472-7/91/1 Bắc Hiền 5
+FU_2155,14,DTCName,8,Bộ FCO TBA Công Nghệ Xanh PT
+FU_2160,14,DTCName,8,Bộ FCO 471-7/131/1 TC Thành Phát
+FU_2161,14,DTCName,8,Bộ FCO TBA Nam Sơn
+FU_2164,14,DTCName,8,Bộ FCO TBA Bắc Sơn
+FU_2165,14,DTCName,8,Bộ FCO TBA Bồ Điền 2
+FU_2166,14,DTCName,8,Bộ FCO TBA Bơm Phong Sơn
+FU_2170,14,DTCName,8,Bộ FCO TBA Sơn quả
+FU_2173,14,DTCName,8,Bộ FCO An Lỗ
+FU_2174,14,DTCName,8,Bộ FCO TBA Bắc Hiền 1
+FU_2177,14,DTCName,8,Bộ FCO TBA Phú Quảng Điền
+FU_2185,14,DTCName,8,Bộ FCO TBA Bắc Hiền 4
+FU_2186,14,DTCName,8,Bộ FCO TBA Bơm Phong Hiền
+FU_2187,14,DTCName,8,Bộ FCO TBA Cao Ban 2
+FU_2188,14,DTCName,8,Bộ FCO TBA TC Thành Phát
+FU_2189,14,DTCName,8,Bộ FCO TBA Cổ Bi 1
+FU_2192,14,DTCName,8,Bộ FCO TBA Bắc Hiền 2
+FU_2193,14,DTCName,8,Bộ FCO TBA Bồ Điền 3
+FU_2202,14,DTCName,8,Bộ FCO TBA Bắc Hiền 5
+FU_2203,14,DTCName,8,Bộ FCO TBA Bồ Điền 1
+FU_2225,14,DTCName,8,Bộ FCO TBA Tây Sơn 3
+FU_2226,14,DTCName,8,Bộ FCO TBA Nam Sơn 3
+FU_2241,14,DTCName,8,Bộ FCO TBA Trang trại Phong Sơn 1
+FU_2244,14,DTCName,8,Bộ FCO TBA Đông An
+FU_2247,14,DTCName,8,Bộ FCO TBA Gia Viên
+FU_2252,14,DTCName,8,Bộ FCO TBA Phò Ninh 2
+FU_2261,14,DTCName,8,Bộ FCO Mặt Trời Huế
+FU_2264,14,DTCName,8,Bộ FCO TBA Nam Lợi
+FU_3775,14,DTCName,8,Bộ FCO TBA Đức Nhuận ( Re 2)
+FU_3778,14,DTCName,8,Bộ FCO TBA Y Tế Quảng Điền
+FU_3779,14,DTCName,8,Bộ FCO TBA UB Quảng Phú
+FU_3781,14,DTCName,8,Bộ FCO TBA Bắc Vinh 2
+FU_3784,14,DTCName,8,Bộ FCO TBA Tba Hạ Lang
+FU_3786,14,DTCName,8,Bộ FCO TBA Phú Lễ 2
+FU_3790,14,DTCName,8,Bộ FCO Bắc Vinh 3
+FU_3828,14,DTCName,8,Bộ FCO TBA Nghĩa Lộ
+FU_3829,14,DTCName,8,Bộ FCO TBA Nam Vinh 3
+FU_3831,14,DTCName,8,BỘ FCO rẽ Bắc Vinh 1_2_3
+FU_3838,14,DTCName,8,Bộ FCO TBA Hạ Cảng
+FU_3843,14,DTCName,8,Bộ FCO TBA Nam Vinh 5
+FU_3865,14,DTCName,8,Bộ FCO TBA Đông Vinh 5
+FU_3867,14,DTCName,8,Bộ FCO TBA Đông Vinh 3
+FU_3868,14,DTCName,8,Bộ FCO TBA Đông Vinh 2
+FU_3873,14,DTCName,8,BỘ FCO 1 ĐI ĐÔNG VINH 2_ ĐÔNG VINH 7
+FU_3896,14,DTCName,8,Bộ FCO 471-7/73/23-1/26 Đi Nghĩa Lộ 2
+FU_3924,14,DTCName,8,BỘ FCO 1 Hạ Cảng
+FU_3928,14,DTCName,8,Bộ FCO TBA Đông Vinh 1
+FU_3931,14,DTCName,8,Bộ FCO TBA Xuân Tuỳ 1
+FU_3951,14,DTCName,8,Bộ FCO TBA Nghĩa Lộ 2
+FU_3956,14,DTCName,8,Bộ FCO TBA Nam Vinh 3 (Rd)
+FU_3968,14,DTCName,8,BỘ FCO 471-7/121 Nam Vinh 1
+FU_3974,14,DTCName,8,BỘ FCO 1 Đi Chợ Quảng Phú
+FU_3981,14,DTCName,8,BỘ FCO 471-7/63/3 Đông Vinh 5
+FU_3992,14,DTCName,8,Bộ FCO TBA Bơm Vinh Phú
+FU_3999,14,DTCName,8,Bộ FCO TBA Đông Vinh 7
+FU_4008,14,DTCName,8,Bộ FCO TBA Quảng Điền 1
+FU_4017,14,DTCName,8,BỘ FCO rẽ đi TBA Bao La
+FU_4029,14,DTCName,8,Bộ FCO TBA Đông Vinh 1 (Rd)
+FU_4036,14,DTCName,8,Bộ FCO 471-7/141/7 Đi TBA Sạc Vinfast Quảng Phú
+FU_4045,14,DTCName,8,Bộ FCO TBA Bắc Vinh 1
+FU_4053,14,DTCName,8,Bộ FCO TBA Đông Vinh 8
+FU_4063,14,DTCName,8,Bộ FCO TBA Bát Vọng
+FU_4069,14,DTCName,8,Bộ FCO TBA Lúa Nam Vinh
+FU_4100,14,DTCName,8,Bộ FCO TBA Xuân Tuỳ 2
+FU_4125,14,DTCName,8,Bộ FCO TBA Nam Vinh 1
+FU_4140,14,DTCName,8,Bộ FCO TBA Chợ Quảng Phú
+FU_4160,14,DTCName,8,Bộ FCO TBA Nam Vinh 2
+FU_4204,14,DTCName,8,Bộ FCO TBA Bát Vọng Tây
+FU_4212,14,DTCName,8,Bộ FCO TBA Bao La
+SW_1835,13,DTCName,8,LBS 471-7/44 Nam Sơn
+SW_1839,13,DTCName,8,DCL 471-7 RMU Premium silica
+SW_1841,13,DTCName,8,DCL 431 RMU Bệnh viện đa khoa 2
+SW_1842,13,DTCName,8,DCL 431-7 RMU Premium silica
+SW_1892,13,DTCName,8,LBS 472-7/120/1 Cao Ban
+SW_1901,13,DTCName,8,LBS 472-7/31/9 Bình Minh Huế
+SW_1905,13,DTCName,8,LBS 473-7A/133 Bồ Điền
+SW_1935,13,DTCName,8,Ngăn 431-3
+SW_1985,13,DTCName,8,431-1 RMU Trạm Vinfast CHXD 20
+SW_1990,13,DTCName,8,LBS 472-7/28/118A/25/1 Phú Quý Nhân
+SW_1993,13,DTCName,8,LBS 472-7/31/11 Mặt Trời Huế
+SW_2008,13,DTCName,8,LBS 471-7/98/22 Phong Sơn
+SW_2049,13,DTCName,8,471-7 Trạm Vinfast - CHXD 20
+SW_2050,13,DTCName,8,Ngăn 471-7
+SW_2053,13,DTCName,8,Ngăn 473-7
+SW_2054,13,DTCName,8,Ngăn 474-7
+SW_2056,13,DTCName,8,Ngăn 412-1
+SW_2057,13,DTCName,8,Ngăn 472-7
+SW_2064,13,DTCName,8,LBS 471-7/8/3 Bồ ĐIền
+SW_2065,13,DTCName,8,LBS 473-7/91 Phong An
+SW_2066,13,DTCName,8,LBS 471-7/182 Thanh Tân
+SW_4166,13,DTCName,8,LBS 471-7/97 Nam Vinh
+SW_4187,13,DTCName,8,DCL 471-7 Sạc Vinfast Quảng Phú
+SW_4188,13,DTCName,8,DCL 472-7 Sạc Vinfast (DỰ PHÒNG) Quảng Phú
+SW_4196,13,DTCName,8,LBS 471-7/141/1 Phú Lễ
+SW_4197,13,DTCName,8,DCL 431-3 TBA Sạc Vinfast Quảng Phú
+SW_5268,13,DTCName,8,LBS 472-7/125 Tứ Phú
+SG_1882,8,DTCName,8,DCL 471-7/17A Phò Ninh
+SG_1890,8,DTCName,8,Bộ DCL 471-7/9 BỒ ÐIỀN
+SG_1897,8,DTCName,8,Bộ DCL 471-7/104 CỔ BI
+SG_1936,8,DTCName,8,Bộ DCL 471-7/182 THANH TÂN
+SG_2222,8,DTCName,8,Bộ DCL 471-7/2 Hòa Mỹ
+SG_2233,8,DTCName,8,Bộ ALTD 471-7/44 Nam Sơn
+SG_2265,8,DTCName,8,Bộ DCL 472-7/49 Gia Viên
+SG_3787,8,DTCName,8,BỘ DCL  472-1 TC SỊA
+SG_3788,8,DTCName,8,BỘ DCL 474-1 TC SỊA
+SG_3889,8,DTCName,8,BỘ DCL 1 Bát Vọng
+SG_3913,8,DTCName,8,Bộ DCL 471-7/73/23-1/1 Đi Nghĩa Lộ_ Xuân Tùy
+SG_4201,8,DTCName,8,BỘ DCL 471-7/29/37 Bát Vọng

@@ -1,4 +1,4 @@
-@setpath@\ImpExp.exe I @upload@\CYMEimpFile\IMPORT.ini
+"@setpath@\ImpExp.exe" I "@upload@\CYMEimpFile\IMPORT.ini"
 ^Z
 
 

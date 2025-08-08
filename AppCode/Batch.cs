@@ -11,11 +11,13 @@ namespace TechGration.AppCode
     {
         public string Main(string Cyme_config_txtReportDirectory, string st, string feeder)
         {
+           
             int value = 0;
             try
             {
-                //the path of the file
-                string path = st + "\\CYMEimpFile\\IMPORT.ERR";
+                string Fid1 = feeder.Replace("/", "-");
+                //the path of the file"D:\Vishal\Lastest Cesu\TechGration\TechGration\CYMEUPLOAD\14093-01\CYMEimpFile\IMPORT.ERR"
+                string path = st + "\\CYMEUPLOAD\\"+ Fid1 + "\\CYMEimpFile\\IMPORT.ERR";
                 if (File.Exists(path))
                 {
                     FileStream inFile = new FileStream(path, FileMode.Open, FileAccess.Read);
@@ -33,9 +35,9 @@ Status = Import Successful
 
 Status = Import Failed [ " + feeder + " ]" +
     "";
-                    while ((record = reader.ReadLine()) != null)
+                    while ((record = reader.ReadToEnd()) != null)
                     {
-                        if (record.Contains("Warning"))
+                        if (record.Contains("Warning :") && !record.Contains("Error :"))
                         {
                             StreamWriter read = File.AppendText(Cyme_config_txtReportDirectory);
                             read.Write(str);
@@ -51,6 +53,12 @@ Status = Import Failed [ " + feeder + " ]" +
                             sw.WriteLine(feeder);
                             sw.Close();
                             value++;
+                        }
+                        else
+                        {
+                            StreamWriter read = File.AppendText(Cyme_config_txtReportDirectory);
+                            read.Write(str);
+                            read.Close();
                         }
                         break;
                         // record = reader.ReadLine();

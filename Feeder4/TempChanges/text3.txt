@@ -1,0 +1,5 @@
+
+[SOURCE]
+FORMAT_SOURCE=SourceID,DeviceNumber,NodeID,NetworkID,OperatingVoltageA,OperatingVoltageB,OperatingVoltageC,SinglePhaseCenterTap,CenterTapPhase
+
+PHDIEN-479_22KV,110kV Phong Điền,755040.691834789_1832344.12430895,PHDIEN-479,0,0,0,0,0

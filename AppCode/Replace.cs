@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TechGration.AppCode
 {
@@ -19,10 +20,7 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         DataTable DT1 = new DataTable();
@@ -40,13 +38,16 @@ namespace TechGration.AppCode
                             }
                             catch (Exception ex)
                             {
-
+                                MessageBox.Show(ex.ToString());
                             }
                         }
                     }
+
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             #endregion TGSECTION_DT
 
@@ -56,10 +57,7 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+               
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         DataTable DT1 = new DataTable();
@@ -80,14 +78,17 @@ namespace TechGration.AppCode
                             }
                             catch (Exception ex)
                             {
-
+                                MessageBox.Show(ex.ToString());
                             }
                         }
 
                     }
+                
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
 
             #endregion TGSECTION_FUSE
@@ -98,10 +99,7 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                  
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         DataTable DT1 = new DataTable();
@@ -121,14 +119,17 @@ namespace TechGration.AppCode
                             }
                             catch (Exception ex)
                             {
-
+                                MessageBox.Show(ex.ToString());
                             }
                         }
 
                     }
+                 
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             #endregion TGSECTION_SWITCH
 
@@ -138,10 +139,7 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                   
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         DataTable DT1 = new DataTable();
@@ -161,14 +159,17 @@ namespace TechGration.AppCode
                             }
                             catch (Exception ex)
                             {
-
+                                MessageBox.Show(ex.ToString());
                             }
                         }
 
                     }
+                  
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             #endregion TGSECTION_BREAKER
 
@@ -178,19 +179,21 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                  
                     try
                     {
                         command.ExecuteNonQuery();
                     }
                     catch (Exception ex)
-                    { }
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                 
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
 
             #endregion UpdateTempSection_Breaked_phase
@@ -202,19 +205,18 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                  
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
 
                         DT5.Load(reader);
                     }
-                    connection.Close();
+                 
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             try
             {
@@ -225,18 +227,16 @@ namespace TechGration.AppCode
                     string aa = "delete from TempSection_NotBreaked where ToNodeId = '" + bb + "'";
                     using (OleDbCommand command = new OleDbCommand(aa, connection))
                     {
-                        if (connection.State != ConnectionState.Open)
-                        {
-                            connection.Open();
-                        }
+                     
                         command.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show(ex.ToString());
+            }
             #endregion tempsection_notbreaked delete
-
 
             #region tempsection_notbreaked delete
             string strSQL6 = "select SectionId, FromNodeId from TempSection_NotBreaked T where not exists (select * from TempNode N where T.FromNodeId= N.NodeId)";
@@ -245,18 +245,17 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                 
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         DT6.Load(reader);
                     }
-                    connection.Close();
+                   
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
 
             try
@@ -267,17 +266,16 @@ namespace TechGration.AppCode
                     string aa = "delete from TempSection_NotBreaked where FromNodeId = '" + bb + "'";
                     using (OleDbCommand command = new OleDbCommand(aa, connection))
                     {
-                        if (connection.State != ConnectionState.Open)
-                        {
-                            connection.Open();
-                        }
+                       
                         command.ExecuteNonQuery();
                     }
 
                 }
             }
             catch (Exception ex)
-            { }
+            {
+                MessageBox.Show(ex.ToString());
+            }
             #endregion tempsection_notbreaked delete
 
             #region tempsection_breaked delete
@@ -287,19 +285,16 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                 
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
 
                         DT7.Load(reader);
                     }
-                    connection.Close();
+                    
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
             }
 
             try
@@ -311,19 +306,15 @@ namespace TechGration.AppCode
                     string aa = "delete from TempSection_Breaked where ToNodeId = '" + bb + "'";
                     using (OleDbCommand command = new OleDbCommand(aa, connection))
                     {
-                        if (connection.State != ConnectionState.Open)
-                        {
-                            connection.Open();
-                        }
+                      
                         command.ExecuteNonQuery();
                     }
 
                 }
             }
             catch (Exception ex)
-            { }
+            { MessageBox.Show(ex.ToString()); }
             #endregion tempsection_breaked delete
-
 
             #region tempsection_breaked delete
             string strSQL8 = "select SectionId, FromNodeId from TempSection_Breaked T where not exists (select * from TempNode N where T.FromNodeId= N.NodeId)";
@@ -332,17 +323,14 @@ namespace TechGration.AppCode
             {
                 try
                 {
-                    if (connection.State != ConnectionState.Open)
-                    {
-                        connection.Open();
-                    }
+                  
                     using (OleDbDataReader reader = command.ExecuteReader())
                     {
                         DT8.Load(reader);
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
             }
             try
             {
@@ -353,16 +341,13 @@ namespace TechGration.AppCode
                     string aa = "delete from TempSection_Breaked where FromNodeId = '" + bb + "'";
                     using (OleDbCommand command = new OleDbCommand(aa, connection))
                     {
-                        if (connection.State != ConnectionState.Open)
-                        {
-                            connection.Open();
-                        }
+                      
                         command.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
-            { }
+            { MessageBox.Show(ex.ToString()); }
             #endregion tempsection_breaked delete
 
             #region TempSection_BUSBAR
@@ -520,7 +505,7 @@ namespace TechGration.AppCode
 
             }
             catch (Exception ex)
-            { }
+            { MessageBox.Show(ex.ToString()); }
             #endregion TempSection_BUSBAR
 
             #region TGDEVICE_SWITCH
@@ -539,7 +524,7 @@ namespace TechGration.AppCode
 
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
             }
             try
             {
@@ -597,7 +582,7 @@ namespace TechGration.AppCode
                                         }
                                     }
                                 }
-                                connection.Close();
+                              
                             }
 
                             string change1 = "select * from TempSection_Breaked where FromNodeId='" + bb + "'";
@@ -628,7 +613,7 @@ namespace TechGration.AppCode
                                     }
 
                                 }
-                                connection.Close();
+                                
                             }
 
                             if (string.IsNullOrEmpty(value) && string.IsNullOrEmpty(value1))
@@ -1047,10 +1032,10 @@ namespace TechGration.AppCode
                 }
             }
             catch (Exception ex)
-            { }
+            { MessageBox.Show(ex.ToString()); }
             #endregion TGDEVICE_SWITCH
 
-
+         
             return ("1");
         }
     }

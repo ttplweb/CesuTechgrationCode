@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TechGration.AppCode
 {
@@ -21,10 +22,7 @@ namespace TechGration.AppCode
                 StreamWriter tw = File.AppendText(st + "\\TempChanges\\text1.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
                     OleDbDataReader reader = cmd.ExecuteReader();
                     string str = @"
 [NODE]
@@ -44,10 +42,11 @@ FORMAT_NODE=NodeID,CoordX,CoordY
                     tw.Close();
 
                     reader.Close();
-                    
+                  
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw.Close();
                 }
             }
@@ -59,10 +58,7 @@ FORMAT_NODE=NodeID,CoordX,CoordY
                 StreamWriter tw1 = File.AppendText(st + "\\TempChanges\\text2.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
                     OleDbDataReader reader1 = cmd1.ExecuteReader();
                     string str = @"
 [HEADNODES] 
@@ -88,10 +84,11 @@ FORMAT_HEADNODES=NodeID,NetworkID,ConnectorIndex,StructureID,HarmonicEnveloppe,E
                     tw1.Close();
 
                     reader1.Close();
-                    
+                  
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw1.Close();
                 }
             }
@@ -104,10 +101,7 @@ FORMAT_HEADNODES=NodeID,NetworkID,ConnectorIndex,StructureID,HarmonicEnveloppe,E
                 StreamWriter tw2 = File.AppendText(st + "\\TempChanges\\text3.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
                     OleDbDataReader reader2 = cmd2.ExecuteReader();
                     string str1 = @"
 [SOURCE]
@@ -134,13 +128,51 @@ FORMAT_SOURCE=SourceID,DeviceNumber,NodeID,NetworkID,OperatingVoltageA,Operating
                     tw2.Close();
 
                     reader2.Close();
+                  
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw2.Close();
                 }
             }
 
+
+            string AA21 = "select DeviceNumber,DeviceType,DataId,DataType,DataValue from TGUDD_DEVICEUDD";
+            using (OleDbCommand cmd = new OleDbCommand(AA21, conn))
+            {
+                StreamWriter tw = File.AppendText(st + "\\TempChanges\\text121.txt");
+                try
+                {
+
+                    OleDbDataReader reader = cmd.ExecuteReader();
+                    string str = @"
+[DEVICEUDD]
+FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue";
+                    tw.WriteLine(str);
+                    while (reader.Read())
+                    {
+                        tw.Write(reader["DeviceNumber"].ToString().Trim());
+                        tw.Write("," + reader["DeviceType"].ToString().Trim());
+                        tw.Write("," + reader["DataId"].ToString().Trim());
+                        tw.Write("," + reader["DataType"].ToString().Trim());
+                        tw.Write("," + reader["DataValue"].ToString().Trim());
+                        // tw.WriteLine(", " + reader["datetime"].ToString());
+                        tw.WriteLine();
+                    }
+                    // tw.WriteLine(DateTime.Now);
+
+                    tw.Close();
+
+                    reader.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    tw.Close();
+                }
+            }
 
 
 
@@ -152,10 +184,7 @@ FORMAT_SOURCE=SourceID,DeviceNumber,NodeID,NetworkID,OperatingVoltageA,Operating
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text4.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                  
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [SOURCE EQUIVALENT]
@@ -187,9 +216,11 @@ FORMAT_SOURCEEQUIVALENT=NodeID,LoadModelName,Voltage,OperatingAngle1,OperatingAn
                     tw3.Close();
 
                     reader3.Close();
+                 
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw3.Close();
                 }
             }
@@ -204,10 +235,7 @@ FORMAT_SOURCEEQUIVALENT=NodeID,LoadModelName,Voltage,OperatingAngle1,OperatingAn
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text5.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [LOAD EQUIVALENT]
@@ -236,9 +264,11 @@ FORMAT_LOADEQUIVALENT=NodeID,LoadModelName,Format,Value1A,Value1B,Value1C,Value2
                     tw3.Close();
 
                     reader3.Close();
+                   
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw3.Close();
                 }
             }
@@ -254,10 +284,7 @@ FORMAT_LOADEQUIVALENT=NodeID,LoadModelName,Format,Value1A,Value1B,Value1C,Value2
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text6.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [OVERHEADLINE SETTING]
@@ -294,9 +321,11 @@ FORMAT_OVERHEADLINESETTING=SectionID,DeviceNumber,DeviceStage,Flags,InitFromEqui
                     tw3.Close();
 
                     reader3.Close();
+                   
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw3.Close();
                 }
             }
@@ -312,10 +341,7 @@ FORMAT_OVERHEADLINESETTING=SectionID,DeviceNumber,DeviceStage,Flags,InitFromEqui
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text7.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                 
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [UNDERGROUNDLINE SETTING]
@@ -370,9 +396,11 @@ FORMAT_UNDERGROUNDLINESETTING=SectionID,DeviceNumber,DeviceStage,Flags,InitFromE
                     tw3.Close();
 
                     reader3.Close();
+                  
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw3.Close();
                 }
             }
@@ -387,23 +415,48 @@ FORMAT_UNDERGROUNDLINESETTING=SectionID,DeviceNumber,DeviceStage,Flags,InitFromE
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text8.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [SECTION]
-FORMAT_SECTION=SectionID,FromNodeID,FromNodeIndex,ToNodeID,ToNodeIndex,Phase,ZoneID,SubNetworkId,EnvironmentID
-FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,LossLoadFactorK,Group1,Group2,Group3,TagText,TagProperties,TagDeltaX,TagDeltaY,TagAngle,TagAlignment,TagBorder,TagBackground,TagTextColor,TagBorderColor,TagBackgroundColor,TagLocation,TagFont,TagTextSize,TagOffset,Version,EnvironmentID
+FORMAT_SECTION=SectionID,FromNodeID,FromNodeIndex,ToNodeID,ToNodeIndex,Phase,ZoneID,SubNetworkId,EnvironmentID 
+FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,LossLoadFactorK,Group1,Group2,Group3,Group4,Group5,TagText,TagProperties,TagDeltaX,TagDeltaY,TagAngle,TagAlignment,TagBorder,TagBackground,TagTextColor,TagBorderColor,TagBackgroundColor,TagLocation,TagFont,TagTextSize,TagOffset,Version,EnvironmentID
 ";
                     tw3.WriteLine(str3);
                     while (reader3.Read())
                     {
                         tw3.Write("FEEDER=" + reader3["NetworkID"].ToString().Trim());
+                        //tw3.Write("," + reader3["HeadNodeID"].ToString().Trim());
+                        //tw3.Write("," + reader3["CoordSet"].ToString().Trim());
+                        //tw3.Write("," + reader3["Years"].ToString().Trim());
+                        //tw3.Write("," + reader3["Description"].ToString().Trim());
+                        //tw3.Write("," + reader3["Color"].ToString().Trim());
+                        //tw3.Write("," + reader3["LoadFactor"].ToString().Trim());
+                        //tw3.Write("," + reader3["LossLoadFactorK"].ToString().Trim());
+                        //tw3.Write("," + reader3["Group1"].ToString().Trim());
+                        //tw3.Write("," + reader3["Group2"].ToString().Trim());
+                        //tw3.Write("," + reader3["Group3"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagText"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagProperties"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagDeltaX"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagDeltaY"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagAngle"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagAlignment"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagBorder"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagBackground"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagTextColor"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagBorderColor"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagBackgroundColor"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagLocation"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagFont"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagTextSize"].ToString().Trim());
+                        //tw3.Write("," + reader3["TagOffset"].ToString().Trim());
+                        //tw3.Write("," + reader3["Version"].ToString().Trim());
+                        //tw3.Write("," + reader3["EnvironmentID"].ToString().Trim());
+
                         tw3.Write("," + reader3["HeadNodeID"].ToString().Trim());
                         tw3.Write("," + reader3["CoordSet"].ToString().Trim());
-                        tw3.Write("," + reader3["Year"].ToString().Trim());
+                        tw3.Write("," + reader3["Years"].ToString().Trim());
                         tw3.Write("," + reader3["Description"].ToString().Trim());
                         tw3.Write("," + reader3["Color"].ToString().Trim());
                         tw3.Write("," + reader3["LoadFactor"].ToString().Trim());
@@ -411,6 +464,8 @@ FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,Lo
                         tw3.Write("," + reader3["Group1"].ToString().Trim());
                         tw3.Write("," + reader3["Group2"].ToString().Trim());
                         tw3.Write("," + reader3["Group3"].ToString().Trim());
+                        tw3.Write("," + reader3["Group4"].ToString().Trim());
+                        tw3.Write("," + reader3["Group5"].ToString().Trim());
                         tw3.Write("," + reader3["TagText"].ToString().Trim());
                         tw3.Write("," + reader3["TagProperties"].ToString().Trim());
                         tw3.Write("," + reader3["TagDeltaX"].ToString().Trim());
@@ -429,34 +484,79 @@ FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,Lo
                         tw3.Write("," + reader3["Version"].ToString().Trim());
                         tw3.Write("," + reader3["EnvironmentID"].ToString().Trim());
 
+
                         // tw.WriteLine(", " + reader["datetime"].ToString());
                         tw3.WriteLine();
                     }
                     tw3.Close();
 
                     reader3.Close();
+                  
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw3.Close();
                 }
             }
 
 
+            string ZZ = "select * from [TEMPSECTION-NOTBREAKED]";
+
+            using (OleDbCommand cmd3 = new OleDbCommand(ZZ, conn))
+            {
+                //cmd.Connection = conn;
+                //cmd.CommandText = "tblOutbox";
+                //cmd.CommandType = CommandType.TableDirect;
+                StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text10.txt");
+                try
+                {
+                   
+                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+                    string str3 = @"";
+                    tw3.WriteLine(str3);
+                    while (reader3.Read())
+                    {
+                        string section = reader3["SectionId"].ToString().Trim();
+                        if (!string.IsNullOrEmpty(section))
+                        {
+                            tw3.Write(reader3["SectionId"].ToString().Trim());
+                            tw3.Write("," + reader3["FromNodeId"].ToString().Trim());
+                            tw3.Write("," + reader3["FromNodeIndex"].ToString().Trim());
+                            tw3.Write("," + reader3["ToNodeId"].ToString().Trim());
+                            tw3.Write("," + reader3["ToNodeIndex"].ToString().Trim());
+                            tw3.Write("," + reader3["Phase"].ToString().Trim());
+                            tw3.Write("," + reader3["ZoneID"].ToString().Trim());
+                            tw3.Write("," + reader3["SubNetworkId"].ToString().Trim());
+                            tw3.Write("," + reader3["EnvironmentID"].ToString().Trim());
+
+                            // tw.WriteLine(", " + reader["datetime"].ToString());
+                            tw3.WriteLine();
+                        }
+                    }
+                    // tw.WriteLine(DateTime.Now);
+
+                    tw3.Close();
+
+                    reader3.Close();
+                   
+                }
+                catch (Exception ex)
+                {
+                    tw3.Close();
+                    MessageBox.Show(ex.ToString());
+                }
+            }
 
 
-
-            string YY = "select * from TempSection_Breaked";
+            string YY = "select * from [TEMPSECTION-BREAKED]";
 
             using (OleDbCommand cmd3 = new OleDbCommand(YY, conn))
             {
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text9.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                 
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"";
                     tw3.WriteLine(str3);
@@ -485,64 +585,15 @@ FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,Lo
                     tw3.Close();
 
                     reader3.Close();
+                   
                 }
                 catch (Exception ex)
                 {
                     tw3.Close();
+                    MessageBox.Show(ex.ToString());
                 }
             }
 
-
-
-
-
-            string ZZ = "select * from TempSection_NotBreaked";
-
-            using (OleDbCommand cmd3 = new OleDbCommand(ZZ, conn))
-            {
-                //cmd.Connection = conn;
-                //cmd.CommandText = "tblOutbox";
-                //cmd.CommandType = CommandType.TableDirect;
-                StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text10.txt");
-                try
-                {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
-                    OleDbDataReader reader3 = cmd3.ExecuteReader();
-                    string str3 = @"";
-                    tw3.WriteLine(str3);
-                    while (reader3.Read())
-                    {
-                        string section = reader3["SectionId"].ToString().Trim();
-                        if (!string.IsNullOrEmpty(section))
-                        {
-                            tw3.Write(reader3["SectionId"].ToString().Trim());
-                            tw3.Write("," + reader3["FromNodeId"].ToString().Trim());
-                            tw3.Write("," + reader3["FromNodeIndex"].ToString().Trim());
-                            tw3.Write("," + reader3["ToNodeId"].ToString().Trim());
-                            tw3.Write("," + reader3["ToNodeIndex"].ToString().Trim());
-                            tw3.Write("," + reader3["Phase"].ToString().Trim());
-                            tw3.Write("," + reader3["ZoneID"].ToString().Trim());
-                            tw3.Write("," + reader3["SubNetworkId"].ToString().Trim());
-                            tw3.Write("," + reader3["EnvironmentID"].ToString().Trim());
-
-                            // tw.WriteLine(", " + reader["datetime"].ToString());
-                            tw3.WriteLine();
-                        }
-                    }
-                    // tw.WriteLine(DateTime.Now);
-
-                    tw3.Close();
-
-                    reader3.Close();
-                }
-                catch (Exception ex)
-                {
-                    tw3.Close();
-                }
-            }
 
             string LL = "select * from TGDEVICE_DISTRIBUTIONTRANSFORMER";
 
@@ -551,10 +602,7 @@ FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,Lo
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text11.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                  
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [TRANSFORMER SETTING]
@@ -564,7 +612,13 @@ FORMAT_TRANSFORMERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags
                     while (reader3.Read())
                     {
                         string section = reader3["SectionID"].ToString().Trim();
+                        if(section== "CA_4873217")
+                        {
+
+                        }
+
                         string deviceno = reader3["DeviceNumber"].ToString().Trim();
+
                         if (!string.IsNullOrEmpty(section) && !string.IsNullOrEmpty(deviceno))
                         {
                             tw3.Write(reader3["SectionID"].ToString().Trim());
@@ -622,10 +676,12 @@ FORMAT_TRANSFORMERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags
                     tw3.Close();
 
                     reader3.Close();
+                  
                 }
                 catch (Exception ex)
                 {
                     tw3.Close();
+                    MessageBox.Show(ex.ToString());
                 }
             }
 
@@ -638,10 +694,7 @@ FORMAT_TRANSFORMERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text12.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                  
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [SWITCH SETTING]
@@ -689,10 +742,12 @@ FORMAT_SWITCHSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,Init
                     tw3.Close();
 
                     reader3.Close();
+                  
                 }
                 catch (Exception ex)
                 {
                     tw3.Close();
+                    MessageBox.Show(ex.ToString());
                 }
             }
 
@@ -703,10 +758,7 @@ FORMAT_SWITCHSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,Init
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text13.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                  
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [BREAKER SETTING]
@@ -770,10 +822,12 @@ FORMAT_BREAKERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,Ini
                     tw3.Close();
 
                     reader3.Close();
+                 
                 }
                 catch (Exception ex)
                 {
                     tw3.Close();
+                    MessageBox.Show(ex.ToString());
                 }
             }
 
@@ -785,10 +839,7 @@ FORMAT_BREAKERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,Ini
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text14.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                 
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [FUSE SETTING]
@@ -836,6 +887,166 @@ FORMAT_FUSESETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFr
                     tw3.Close();
 
                     reader3.Close();
+                  
+                }
+                catch (Exception ex)
+                {
+                    tw3.Close();
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
+            string KK1 = "select * from TGDEVICE_RECLOSER";
+
+            using (OleDbCommand cmd3 = new OleDbCommand(KK1, conn))
+            {
+                StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text125.txt");
+                try
+                {
+
+                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+                    string str3 = @"
+[RECLOSER SETTING]
+FORMAT_RECLOSERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,CoordX,CoordY,ClosedPhase,Locked,RC,NStatus,TCCID,PhPickup,GrdPickup,Alternate,PhAltPickup,GrdAltPickup,FromNodeID,EnableReclosing,FaultIndicator,EnableFuseSaving,MinRatedCurrentForFuseSaving,Automated,SensorMode,Strategic,RestorationMode,ConnectionStatus,TCCRepositoryID,TCCRepositoryAlternateID1,TCCRepositoryAlternateID2,TCCRepositoryAlternateID3,TCCRepositoryAlternateID4,TCCRepositoryAlternateID5,TCCRepositoryAlternateID6,TCCRepositoryAlternateID7,TCCRepositoryAlternateID8,TCCRepositoryAlternateID9,TCCRepositoryAlternateID10,IntellirupterTCCRepositoryID,ByPassOnRestoration,Reversible,TCCSettingsSelection
+";
+                    tw3.WriteLine(str3);
+                    while (reader3.Read())
+                    {
+                        string section = reader3["SectionID"].ToString().Trim();
+                        string deviceno = reader3["DeviceNumber"].ToString().Trim();
+                        if (!string.IsNullOrEmpty(section) && !string.IsNullOrEmpty(deviceno))
+                        {
+                            tw3.Write(reader3["SectionID"].ToString().Trim());
+                            tw3.Write("," + reader3["Location"].ToString().Trim());
+                            tw3.Write("," + reader3["EqID"].ToString().Trim());
+                            tw3.Write("," + reader3["DeviceNumber"].ToString().Trim());
+                            tw3.Write("," + reader3["DeviceStage"].ToString().Trim());
+                            tw3.Write("," + reader3["Flags"].ToString().Trim());
+                            tw3.Write("," + reader3["InitFromEquipFlags"].ToString().Trim());
+                            tw3.Write("," + reader3["CoordX"].ToString().Trim());
+                            tw3.Write("," + reader3["CoordY"].ToString().Trim());
+                            tw3.Write("," + reader3["ClosedPhase"].ToString().Trim());
+                            tw3.Write("," + reader3["Locked"].ToString().Trim());
+                            tw3.Write("," + reader3["RC"].ToString().Trim());
+                            tw3.Write("," + reader3["NStatus"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCID"].ToString().Trim());
+                            tw3.Write("," + reader3["PhPickup"].ToString().Trim());
+                            tw3.Write("," + reader3["GrdPickup"].ToString().Trim());
+                            tw3.Write("," + reader3["Alternate"].ToString().Trim());
+                            tw3.Write("," + reader3["PhAltPickup"].ToString().Trim());
+                            tw3.Write("," + reader3["GrdAltPickup"].ToString().Trim());
+                            tw3.Write("," + reader3["FromNodeID"].ToString().Trim());
+                            tw3.Write("," + reader3["EnableReclosing"].ToString().Trim());
+                            tw3.Write("," + reader3["FaultIndicator"].ToString().Trim());
+                            tw3.Write("," + reader3["EnableFuseSaving"].ToString().Trim());
+                            tw3.Write("," + reader3["MinRatedCurrentForFuseSaving"].ToString().Trim());
+                            tw3.Write("," + reader3["Automated"].ToString().Trim());
+                            tw3.Write("," + reader3["SensorMode"].ToString().Trim());
+                            tw3.Write("," + reader3["Strategic"].ToString().Trim());
+                            tw3.Write("," + reader3["RestorationMode"].ToString().Trim());
+                            tw3.Write("," + reader3["ConnectionStatus"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryID"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID1"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID2"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID3"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID4"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID5"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID6"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID7"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID8"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID9"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCRepositoryAlternateID10"].ToString().Trim());
+                            tw3.Write("," + reader3["IntellirupterTCCRepositoryID"].ToString().Trim());
+                            tw3.Write("," + reader3["ByPassOnRestoration"].ToString().Trim());
+                            tw3.Write("," + reader3["Reversible"].ToString().Trim());
+                            tw3.Write("," + reader3["TCCSettingsSelection"].ToString().Trim());
+
+
+                            tw3.WriteLine();
+                        }
+                    }
+                    tw3.Close();
+
+                    reader3.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    tw3.Close();
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
+
+            string cap = "select * from [TGDEVICE_SHUNTCAPACITOR]";
+            using (OleDbCommand capcom = new OleDbCommand(cap, conn))
+            {
+                StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\textshunt25.txt");
+                try
+                {
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
+                    OleDbDataReader capRead = capcom.ExecuteReader();
+                    string capstr = @"
+[SHUNT CAPACITOR SETTING]
+FORMAT_SHUNTCAPACITORSETTING=SectionID,DeviceNumber,DeviceStage,Location,Connection,FixedKVARA,FixedKVARB,FixedKVARC,FixedLossesA,FixedLossesB,FixedLossesC,SwitchedKVARA,SwitchedKVARB,SwitchedKVARC,SwitchedLossesA,SwitchedLossesB,SwitchedLossesC,ByPhase,VoltageOverride,VoltageOverrideOn,VoltageOverrideOff,VoltageOverrideDeadband,KV,Control,OnValueA,OnValueB,OnValueC,OffValueA,OffValueB,OffValueC,SwitchingMode,InitiallyClosedPhase,ControllingPhase,SensorLocation,ControlledNodeId,PythonDeviceScriptID,ShuntCapacitorID,ConnectionStatus,CTConnection,InterruptingRating
+";
+                    tw3.WriteLine(capstr);
+                    while (capRead.Read())
+                    {
+                        string sectionId = Convert.ToString(capRead["SectionID"]).Trim();
+                        string deviceNumber = Convert.ToString(capRead["DeviceNumber"]).Trim();
+                        if (!string.IsNullOrWhiteSpace(sectionId) && !string.IsNullOrWhiteSpace(deviceNumber))
+                        {
+                            tw3.Write(System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SectionID"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["DeviceNumber"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["DeviceStage"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["Location"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["Connection"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["FixedKVARA"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["FixedKVARB"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["FixedKVARC"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["FixedLossesA"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["FixedLossesB"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["FixedLossesC"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchedKVARA"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchedKVARB"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchedKVARC"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchedLossesA"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchedLossesB"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchedLossesC"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["ByPhase"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["VoltageOverride"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["VoltageOverrideOn"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["VoltageOverrideOff"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["VoltageOverrideDeadband"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["KV"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["Control"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["OnValueA"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["OnValueB"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["OnValueC"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["OffValueA"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["OffValueB"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["OffValueC"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SwitchingMode"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["InitiallyClosedPhase"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["ControllingPhase"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["SensorLocation"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["ControlledNodeId"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["PythonDeviceScriptID"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["ShuntCapacitorID"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["ConnectionStatus"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["CTConnection"]), @"\t|\n|\r", ""));
+                            tw3.Write("," + System.Text.RegularExpressions.Regex.Replace(Convert.ToString(capRead["InterruptingRating"]), @"\t|\n|\r", ""));
+
+                            tw3.WriteLine();
+                        }
+                    }
+                    capRead.Close();
+                    tw3.Close();
+                    conn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -844,20 +1055,18 @@ FORMAT_FUSESETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFr
             }
 
 
-
-
             string XX = "select * from TGNODE_INTERMEDIATENODES";
 
             using (OleDbCommand cmd3 = new OleDbCommand(XX, conn))
             {
-              
+                if (conn.State == ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
                 StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text15.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                 
                     OleDbDataReader reader3 = cmd3.ExecuteReader();
                     string str3 = @"
 [INTERMEDIATE NODES]
@@ -883,234 +1092,423 @@ FORMAT_INTERMEDIATENODE=SectionID,SeqNumber,CoordX,CoordY,IsBreakPoint,BreakPoin
                     tw3.Close();
 
                     reader3.Close();
+                
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw3.Close();
+                 
                 }
             }
 
 
-            string II = "select * from TGDTAG_DEVICETAG";
 
-            using (OleDbCommand cmd3 = new OleDbCommand(II, conn))
+            //Solar
+            string SOLAR = "select * from TGDEVICE_SOLAR";
+
+            using (OleDbCommand cmd2 = new OleDbCommand(SOLAR, conn))
             {
-                StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text16.txt");
+                StreamWriter tw2 = File.AppendText(st + "\\TempChanges\\textS2.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
+
+                    OleDbDataReader reader2 = cmd2.ExecuteReader();
+                    string str1 = @"
+[PHOTOVOLTAIC SETTINGS]
+FORMAT_PHOTOVOLTAICSETTING=SectionID,Location,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,EquipmentID,NumberOfGenerators,SymbolSize,NS,NP,AmbientTemperature,FaultContributionBasedOnRatedPower,FaultContributionUnit,FaultContribution,ConstantInsolation,ForceT0,InsolationModelID,FrequencySourceID,SourceHarmonicModelType,PulseNumber,FiringAngle,OverlapAngle,ConnectionStatus,ConnectionConfiguration,CTConnection,Phase";
+                    tw2.WriteLine(str1);
+                    while (reader2.Read())
                     {
-                        conn.Open();
-                    }
-                    OleDbDataReader reader3 = cmd3.ExecuteReader();
-                    string str3 = @"
-[DEVICETAG]
-FORMAT_DEVICETAG=DeviceNumber,DeviceType,TagText,TagProperties,TagDeltaX,TagDeltaY,TagAngle,TagAlignment,TagBorder,TagBackground,TagTextColor,TagBorderColor,TagBackgroundColor,TagLocation,TagFont,TagTextSize,TagOffset
-";
-                    tw3.WriteLine(str3);
-                    while (reader3.Read())
-                    {
-                        string deviceno = reader3["DeviceNumber"].ToString().Trim();
+                        string deviceno = reader2["SECTIONID"].ToString().Trim();
                         if (!string.IsNullOrEmpty(deviceno))
                         {
-                            tw3.Write(reader3["DeviceNumber"].ToString().Trim());
-                            tw3.Write("," + reader3["DeviceType"].ToString().Trim());
-                            tw3.Write("," + reader3["TagText"].ToString().Trim());
-                            tw3.Write("," + reader3["TagProperties"].ToString().Trim());
-                            tw3.Write("," + reader3["TagDeltaX"].ToString().Trim());
-                            tw3.Write("," + reader3["TagDeltaY"].ToString().Trim());
-                            tw3.Write("," + reader3["TagAngle"].ToString().Trim());
-                            tw3.Write("," + reader3["TagAlignment"].ToString().Trim());
-                            tw3.Write("," + reader3["TagBorder"].ToString().Trim());
-                            tw3.Write("," + reader3["TagBackground"].ToString().Trim());
-                            tw3.Write("," + reader3["TagTextColor"].ToString().Trim());
-                            tw3.Write("," + reader3["TagBorderColor"].ToString().Trim());
-                            tw3.Write("," + reader3["TagBackgroundColor"].ToString().Trim());
-                            tw3.Write("," + reader3["TagLocation"].ToString().Trim());
-                            tw3.Write("," + reader3["TagFont"].ToString().Trim());
-                            tw3.Write("," + reader3["TagTextSize"].ToString().Trim());
-                            tw3.Write("," + reader3["TagOffset"].ToString().Trim());
 
-                            // tw.WriteLine(", " + reader["datetime"].ToString());
-                            tw3.WriteLine();
+                            tw2.Write(reader2["SECTIONID"].ToString().Trim());
+                            tw2.Write("," + reader2["Location"].ToString().Trim());
+                            tw2.Write("," + reader2["DeviceNumber"].ToString().Trim());
+                            tw2.Write("," + reader2["DeviceStage"].ToString().Trim());
+                            tw2.Write("," + reader2["Flags"].ToString().Trim());
+                            tw2.Write("," + reader2["InitFromEquipFlags"].ToString().Trim());
+                            tw2.Write("," + reader2["EquipmentID"].ToString().Trim());
+                            tw2.Write("," + reader2["NumberOfGenerators"].ToString().Trim());
+                            tw2.Write("," + reader2["SymbolSize"].ToString().Trim());
+                            tw2.Write("," + reader2["NS"].ToString().Trim());
+                            tw2.Write("," + reader2["NP"].ToString().Trim());
+                            tw2.Write("," + reader2["AmbientTemperature"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContributionBasedOnRatedPower"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContributionUnit"].ToString().Trim());
+                            // PulseNumber,FiringAngle,OverlapAngle,ConnectionStatus,ConnectionConfiguration,CTConnection,Phase
+                            tw2.Write("," + reader2["FaultContribution"].ToString().Trim());
+                            tw2.Write("," + reader2["ConstantInsolation"].ToString().Trim());
+                            tw2.Write("," + reader2["ForceT0"].ToString().Trim());
+                            tw2.Write("," + reader2["InsolationModelID"].ToString().Trim());
+                            tw2.Write("," + reader2["FrequencySourceID"].ToString().Trim());
+                            tw2.Write("," + reader2["SourceHarmonicModelType"].ToString().Trim());
+                            tw2.Write("," + reader2["PulseNumber"].ToString().Trim());
+                            tw2.Write("," + reader2["FiringAngle"].ToString().Trim());
+                            tw2.Write("," + reader2["OverlapAngle"].ToString().Trim());
+                            tw2.Write("," + reader2["ConnectionStatus"].ToString().Trim());
+                            tw2.Write("," + reader2["ConnectionConfiguration"].ToString().Trim());
+                            tw2.Write("," + reader2["CTConnection"].ToString().Trim());
+                            tw2.Write("," + reader2["Phase"].ToString().Trim());
+                            tw2.WriteLine();
                         }
                     }
-                    // tw.WriteLine(DateTime.Now);
+                    tw2.Close();
 
-                    tw3.Close();
+                    reader2.Close();
 
-                    reader3.Close();
                 }
                 catch (Exception ex)
                 {
-                    tw3.Close();
+                    MessageBox.Show(ex.ToString());
+                    tw2.Close();
                 }
             }
 
+            //Battery
 
-            string jj = "select * from TGUDD_NETWORKUDD";
-            using (OleDbCommand cmd3 = new OleDbCommand(jj, conn))
+            string BATTERYSTORAG = "select * from TGDEVICE_BATTERYSTORAG";
+
+            using (OleDbCommand cmd2 = new OleDbCommand(BATTERYSTORAG, conn))
             {
-                StreamWriter sw = File.AppendText(st + "\\TempChanges\\text17.txt");
+                StreamWriter tw2 = File.AppendText(st + "\\TempChanges\\textB3.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
+
+                    OleDbDataReader reader2 = cmd2.ExecuteReader();
+                    string str1 = @"
+[BESS SETTINGS]
+FORMAT_BESSSETTING=SectionID,Location,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,EquipmentID,Phase,ConnectionStatus,ConnectionConfiguration,CTConnection,SymbolSize,MaximumSOC,MinimumSOC,FaultContributionBasedOnRatedPower,FaultContributionUnit,FaultContribution,FrequencySourceID,SourceHarmonicModelType,PulseNumber,FiringAngle,OverlapAngle,InitialSOC,GridOutput,RiseFallUnit,PowerFallLimit,PowerRiseLimit,ChargeDelayUnit,ChargeDelay,DischargeDelayUnit,DischargeDelay,PythonDeviceScriptID ";
+                    tw2.WriteLine(str1);
+                    while (reader2.Read())
                     {
-                        conn.Open();
-                    }
-                    OleDbDataReader reader3 = cmd3.ExecuteReader();
-
-                    string str3 = @"
-[NETWORKUDD]
-FORMAT_NETWORKUDD=NetworkId,DataId,DataType,DataValue
-";
-                    sw.WriteLine(str3);
-                    while (reader3.Read())
-                    {
-                        sw.Write(reader3["NetworkId"].ToString().Trim());
-                        sw.Write("," + reader3["DataId"].ToString().Trim());
-                        sw.Write("," + reader3["DataType"].ToString().Trim());
-                        sw.Write("," + reader3["DataValue"].ToString().Trim());
-
-                        sw.WriteLine();
-                    }
-
-                    sw.Close();
-                    reader3.Close();
-                }
-                catch (Exception ex)
-                {
-                    sw.Close();
-                }
-
-
-            }
-
-
-            string kk = "select * from TGUDD_NODEUDD";
-            using (OleDbCommand cmd3 = new OleDbCommand(kk, conn))
-            {
-                StreamWriter sw = new StreamWriter(st + "\\TempChanges\\text18.txt");
-                try
-                {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
-                    OleDbDataReader reader3 = cmd3.ExecuteReader();
-
-                    string str3 = @"
-[NODEUDD]
-FORMAT_NODEUDD=NodeId,DataId,DataType,DataValue
-";
-
-                    sw.WriteLine(str3);
-
-                    while (reader3.Read())
-                    {
-                        sw.Write(reader3["NodeId"].ToString().Trim());
-                        sw.Write("," + reader3["DataId"].ToString().Trim());
-                        sw.Write("," + reader3["DataType"].ToString().Trim());
-                        sw.Write("," + reader3["DataValue"].ToString().Trim());
-                        sw.WriteLine();
-                    }
-
-                    sw.Close();
-                    reader3.Close();
-                }
-                catch (Exception ex)
-                {
-                    sw.Close();
-                }
-
-            }
-
-
-            string ll = "select * from TGUDD_SECTIONUDD";
-            using (OleDbCommand cmd3 = new OleDbCommand(ll, conn))
-            {
-                StreamWriter sw = new StreamWriter(st + "\\TempChanges\\text19.txt");
-                try
-                {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
-                    OleDbDataReader reader3 = cmd3.ExecuteReader();
-
-                    string str3 = @"
-[SECTIONUDD]
-FORMAT_SECTIONUDD=SectionId,DataId,DataType,DataValue
-";
-
-                    sw.WriteLine(str3);
-
-                    while (reader3.Read())
-                    {
-                        string section = reader3["SectionId"].ToString().Trim();
-                        if (!string.IsNullOrEmpty(section))
-                        {
-                            sw.Write(reader3["SectionId"].ToString().Trim());
-                            sw.Write("," + reader3["DataId"].ToString().Trim());
-                            sw.Write("," + reader3["DataType"].ToString().Trim());
-                            sw.Write("," + reader3["DataValue"].ToString().Trim());
-                            sw.WriteLine();
-                        }
-                    }
-
-                    sw.Close();
-                    reader3.Close();
-                }
-                catch (Exception ex)
-                {
-                    sw.Close();
-                }
-            }
-
-
-            string mm = "select * from TGUDD_DEVICEUDD";
-            using (OleDbCommand cmd3 = new OleDbCommand(mm, conn))
-            {
-                StreamWriter sw = new StreamWriter(st + "\\TempChanges\\text20.txt");
-                try
-                {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
-                    OleDbDataReader reader3 = cmd3.ExecuteReader();
-
-                    string str3 = @"
-[DEVICEUDD]
-FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
-";
-
-                    sw.WriteLine(str3);
-
-                    while (reader3.Read())
-                    {
-                        string deviceno = reader3["DeviceNumber"].ToString().Trim();
+                        string deviceno = reader2["SECTIONID"].ToString().Trim();
                         if (!string.IsNullOrEmpty(deviceno))
                         {
-                            sw.Write(reader3["DeviceNumber"].ToString().Trim());
-                            sw.Write("," + reader3["DeviceType"].ToString().Trim());
-                            sw.Write("," + reader3["DataId"].ToString().Trim());
-                            sw.Write("," + reader3["DataType"].ToString().Trim());
-                            sw.Write("," + reader3["DataValue"].ToString().Trim());
-                            sw.WriteLine();
+
+                            tw2.Write(reader2["SectionID"].ToString().Trim());
+                            tw2.Write("," + reader2["Location"].ToString().Trim());
+                            tw2.Write("," + reader2["DeviceNumber"].ToString().Trim());
+                            tw2.Write("," + reader2["DeviceStage"].ToString().Trim());
+                            tw2.Write("," + reader2["Flags"].ToString().Trim());
+                            tw2.Write("," + reader2["InitFromEquipFlags"].ToString().Trim());
+                            tw2.Write("," + reader2["EquipmentID"].ToString().Trim());
+                            tw2.Write("," + reader2["Phase"].ToString().Trim());
+                            tw2.Write("," + reader2["ConnectionStatus"].ToString().Trim());
+                            tw2.Write("," + reader2["ConnectionConfiguration"].ToString().Trim());
+                            tw2.Write("," + reader2["CTConnection"].ToString().Trim());
+                            tw2.Write("," + reader2["SymbolSize"].ToString().Trim());
+                            tw2.Write("," + reader2["MaximumSOC"].ToString().Trim());
+                            tw2.Write("," + reader2["MinimumSOC"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContributionBasedOnRatedPower"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContributionUnit"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContribution"].ToString().Trim());
+                            tw2.Write("," + reader2["FrequencySourceID"].ToString().Trim());
+                            tw2.Write("," + reader2["SourceHarmonicModelType"].ToString().Trim());
+                            tw2.Write("," + reader2["PulseNumber"].ToString().Trim());
+                            tw2.Write("," + reader2["FiringAngle"].ToString().Trim());
+                            tw2.Write("," + reader2["OverlapAngle"].ToString().Trim());
+                            tw2.Write("," + reader2["InitialSOC"].ToString().Trim());
+                            tw2.Write("," + reader2["GridOutput"].ToString().Trim());
+                            tw2.Write("," + reader2["RiseFallUnit"].ToString().Trim());
+                            tw2.Write("," + reader2["PowerFallLimit"].ToString().Trim());
+                            tw2.Write("," + reader2["PowerRiseLimit"].ToString().Trim());
+                            tw2.Write("," + reader2["ChargeDelayUnit"].ToString().Trim());
+                            tw2.Write("," + reader2["ChargeDelay"].ToString().Trim());
+                            tw2.Write("," + reader2["DischargeDelayUnit"].ToString().Trim());
+                            tw2.Write("," + reader2["DischargeDelay"].ToString().Trim());
+                            tw2.Write("," + reader2["PythonDeviceScriptID"].ToString().Trim());
+                            tw2.WriteLine();
                         }
                     }
-                    sw.Close();
-                    reader3.Close();
+                    tw2.Close();
+
+                    reader2.Close();
+
                 }
                 catch (Exception ex)
                 {
-                    sw.Close();
+                    MessageBox.Show(ex.ToString());
+                    tw2.Close();
                 }
-
-
-
             }
+
+            string WINDMILL = "select * from TGDEVICE_WINDMILL";
+
+            using (OleDbCommand cmd2 = new OleDbCommand(WINDMILL, conn))
+            {
+                StreamWriter tw2 = File.AppendText(st + "\\TempChanges\\text102.txt");
+                try
+                {
+
+                    OleDbDataReader reader2 = cmd2.ExecuteReader();
+                    string str1 = @"
+[WECS SETTINGS]
+FORMAT_WECSSETTING=SectionID,Location,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,EquipmentID,NumberOfGenerators,SymbolSize,ConstantWindSpeed,ForceT0,WindModelID,FrequencySourceID,SourceHarmonicModelType,PulseNumber,FiringAngle,OverlapAngle,ConnectionStatus,ConnectionConfiguration,Phase,FaultContributionBasedOnRatedPower,FaultContributionUnit,FaultContribution,CTConnection";
+                    tw2.WriteLine(str1);
+                    while (reader2.Read())
+                    {
+                        string deviceno = reader2["SECTIONID"].ToString().Trim();
+                        if (!string.IsNullOrEmpty(deviceno))
+                        {
+                            tw2.Write(reader2["SECTIONID"].ToString().Trim());
+                            tw2.Write("," + reader2["Location"].ToString().Trim());
+                            tw2.Write("," + reader2["DeviceNumber"].ToString().Trim());
+                            tw2.Write("," + reader2["DeviceStage"].ToString().Trim());
+                            tw2.Write("," + reader2["Flags"].ToString().Trim());
+                            tw2.Write("," + reader2["InitFromEquipFlags"].ToString().Trim());
+                            tw2.Write("," + reader2["EquipmentID"].ToString().Trim());
+                            tw2.Write("," + reader2["NumberOfGenerators"].ToString().Trim());
+                            tw2.Write("," + reader2["SymbolSize"].ToString().Trim());
+                            tw2.Write("," + reader2["ConstantWindSpeed"].ToString().Trim());
+                            tw2.Write("," + reader2["ForceT0"].ToString().Trim());
+                            tw2.Write("," + reader2["WindModelID"].ToString().Trim());
+                            tw2.Write("," + reader2["FrequencySourceID"].ToString().Trim());
+                            tw2.Write("," + reader2["SourceHarmonicModelType"].ToString().Trim());
+                            tw2.Write("," + reader2["PulseNumber"].ToString().Trim());
+                            tw2.Write("," + reader2["FiringAngle"].ToString().Trim());
+                            tw2.Write("," + reader2["OverlapAngle"].ToString().Trim());
+                            tw2.Write("," + reader2["ConnectionStatus"].ToString().Trim());
+                            tw2.Write("," + reader2["ConnectionConfiguration"].ToString().Trim());
+                            tw2.Write("," + reader2["Phase"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContributionBasedOnRatedPower"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContributionUnit"].ToString().Trim());
+                            tw2.Write("," + reader2["FaultContribution"].ToString().Trim());
+                            tw2.Write("," + reader2["CTConnection"].ToString().Trim());
+                            tw2.WriteLine();
+                        }
+                    }
+                    tw2.Close();
+
+                    reader2.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    tw2.Close();
+                }
+            }
+
+
+
+            //            string II = "select * from TGDTAG_DEVICETAG";
+
+            //            using (OleDbCommand cmd3 = new OleDbCommand(II, conn))
+            //            {
+            //                StreamWriter tw3 = File.AppendText(st + "\\TempChanges\\text16.txt");
+            //                try
+            //                {
+
+            //                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+            //                    string str3 = @"
+            //[DEVICETAG]
+            //FORMAT_DEVICETAG=DeviceNumber,DeviceType,TagText,TagProperties,TagDeltaX,TagDeltaY,TagAngle,TagAlignment,TagBorder,TagBackground,TagTextColor,TagBorderColor,TagBackgroundColor,TagLocation,TagFont,TagTextSize,TagOffset
+            //";
+            //                    tw3.WriteLine(str3);
+            //                    while (reader3.Read())
+            //                    {
+            //                        string deviceno = reader3["DeviceNumber"].ToString().Trim();
+            //                        if (!string.IsNullOrEmpty(deviceno))
+            //                        {
+            //                            tw3.Write(reader3["DeviceNumber"].ToString().Trim());
+            //                            tw3.Write("," + reader3["DeviceType"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagText"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagProperties"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagDeltaX"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagDeltaY"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagAngle"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagAlignment"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagBorder"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagBackground"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagTextColor"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagBorderColor"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagBackgroundColor"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagLocation"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagFont"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagTextSize"].ToString().Trim());
+            //                            tw3.Write("," + reader3["TagOffset"].ToString().Trim());
+
+            //                            // tw.WriteLine(", " + reader["datetime"].ToString());
+            //                            tw3.WriteLine();
+            //                        }
+            //                    }
+            //                    // tw.WriteLine(DateTime.Now);
+
+            //                    tw3.Close();
+
+            //                    reader3.Close();
+
+            //                }
+            //                catch (Exception ex)
+            //                {
+            //                    tw3.Close();
+            //                    MessageBox.Show(ex.ToString());
+            //                }
+            //            }
+
+
+            //            string jj = "select * from TGUDD_NETWORKUDD";
+            //            using (OleDbCommand cmd3 = new OleDbCommand(jj, conn))
+            //            {
+            //                StreamWriter sw = File.AppendText(st + "\\TempChanges\\text17.txt");
+            //                try
+            //                {
+
+            //                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+
+            //                    string str3 = @"
+            //[NETWORKUDD]
+            //FORMAT_NETWORKUDD=NetworkId,DataId,DataType,DataValue
+            //";
+            //                    sw.WriteLine(str3);
+            //                    while (reader3.Read())
+            //                    {
+            //                        sw.Write(reader3["NetworkId"].ToString().Trim());
+            //                        sw.Write("," + reader3["DataId"].ToString().Trim());
+            //                        sw.Write("," + reader3["DataType"].ToString().Trim());
+            //                        sw.Write("," + reader3["DataValue"].ToString().Trim());
+
+            //                        sw.WriteLine();
+            //                    }
+
+            //                    sw.Close();
+            //                    reader3.Close();
+
+            //                }
+            //                catch (Exception ex)
+            //                {
+            //                    sw.Close();
+            //                    MessageBox.Show(ex.ToString());
+            //                }
+
+
+            //            }
+
+
+            //            string kk = "select * from TGUDD_NODEUDD";
+            //            using (OleDbCommand cmd3 = new OleDbCommand(kk, conn))
+            //            {
+            //                StreamWriter sw = new StreamWriter(st + "\\TempChanges\\text18.txt");
+            //                try
+            //                {
+
+            //                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+
+            //                    string str3 = @"
+            //[NODEUDD]
+            //FORMAT_NODEUDD=NodeId,DataId,DataType,DataValue
+            //";
+
+            //                    sw.WriteLine(str3);
+
+            //                    while (reader3.Read())
+            //                    {
+            //                        sw.Write(reader3["NodeId"].ToString().Trim());
+            //                        sw.Write("," + reader3["DataId"].ToString().Trim());
+            //                        sw.Write("," + reader3["DataType"].ToString().Trim());
+            //                        sw.Write("," + reader3["DataValue"].ToString().Trim());
+            //                        sw.WriteLine();
+            //                    }
+
+            //                    sw.Close();
+            //                    reader3.Close();
+
+            //                }
+            //                catch (Exception ex)
+            //                {
+            //                    sw.Close();
+            //                    MessageBox.Show(ex.ToString());
+            //                }
+
+            //            }
+
+
+            //            string ll = "select * from TGUDD_SECTIONUDD";
+            //            using (OleDbCommand cmd3 = new OleDbCommand(ll, conn))
+            //            {
+            //                StreamWriter sw = new StreamWriter(st + "\\TempChanges\\text19.txt");
+            //                try
+            //                {
+
+            //                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+
+            //                    string str3 = @"
+            //[SECTIONUDD]
+            //FORMAT_SECTIONUDD=SectionId,DataId,DataType,DataValue
+            //";
+
+            //                    sw.WriteLine(str3);
+
+            //                    while (reader3.Read())
+            //                    {
+            //                        string section = reader3["SectionId"].ToString().Trim();
+            //                        if (!string.IsNullOrEmpty(section))
+            //                        {
+            //                            sw.Write(reader3["SectionId"].ToString().Trim());
+            //                            sw.Write("," + reader3["DataId"].ToString().Trim());
+            //                            sw.Write("," + reader3["DataType"].ToString().Trim());
+            //                            sw.Write("," + reader3["DataValue"].ToString().Trim());
+            //                            sw.WriteLine();
+            //                        }
+            //                    }
+
+            //                    sw.Close();
+            //                    reader3.Close();
+
+            //                }
+            //                catch (Exception ex)
+            //                {
+            //                    sw.Close();
+            //                    MessageBox.Show(ex.ToString());
+            //                }
+            //            }
+
+
+            //            string mm = "select * from TGUDD_DEVICEUDD";
+            //            using (OleDbCommand cmd3 = new OleDbCommand(mm, conn))
+            //            {
+            //                StreamWriter sw = new StreamWriter(st + "\\TempChanges\\text20.txt");
+            //                try
+            //                {
+
+            //                    OleDbDataReader reader3 = cmd3.ExecuteReader();
+
+            //                    string str3 = @"
+            //[DEVICEUDD]
+            //FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
+            //";
+
+            //                    sw.WriteLine(str3);
+
+            //                    while (reader3.Read())
+            //                    {
+            //                        string deviceno = reader3["DeviceNumber"].ToString().Trim();
+            //                        if (!string.IsNullOrEmpty(deviceno))
+            //                        {
+            //                            sw.Write(reader3["DeviceNumber"].ToString().Trim());
+            //                            sw.Write("," + reader3["DeviceType"].ToString().Trim());
+            //                            sw.Write("," + reader3["DataId"].ToString().Trim());
+            //                            sw.Write("," + reader3["DataType"].ToString().Trim());
+            //                            sw.Write("," + reader3["DataValue"].ToString().Trim());
+            //                            sw.WriteLine();
+            //                        }
+            //                    }
+            //                    sw.Close();
+            //                    reader3.Close();
+
+            //                }
+            //                catch (Exception ex)
+            //                {
+            //                    sw.Close();
+            //                    MessageBox.Show(ex.ToString());
+            //                }
+
+
+
+            //            }
 
 
 
@@ -1125,8 +1523,9 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
+                
                 try
                 {
                     using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text1.txt"))
@@ -1136,7 +1535,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                 }
                 catch (Exception ex)
                 {
-
+                    MessageBox.Show(ex.ToString());
                 }
 
                 try
@@ -1147,7 +1546,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1157,7 +1556,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1167,7 +1566,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1177,7 +1576,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1187,7 +1586,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1207,7 +1606,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1217,7 +1616,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1227,7 +1626,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1237,7 +1636,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1248,6 +1647,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                 }
 
                 try
@@ -1258,7 +1658,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1268,7 +1668,7 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
@@ -1278,60 +1678,125 @@ FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
-                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text16.txt"))
+                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text121.txt"))
                     {
                         writer.Write(reader5.ReadToEnd());
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
-                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text17.txt"))
+                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text125.txt"))
                     {
                         writer.Write(reader5.ReadToEnd());
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
+
 
                 try
                 {
-                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text18.txt"))
+                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\textshunt25.txt"))
                     {
                         writer.Write(reader5.ReadToEnd());
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
-                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text19.txt"))
+                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\textS2.txt"))
                     {
                         writer.Write(reader5.ReadToEnd());
                     }
                 }
                 catch (Exception ex)
-                { }
+                { MessageBox.Show(ex.ToString()); }
 
                 try
                 {
-                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text20.txt"))
+                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\textB3.txt"))
                     {
                         writer.Write(reader5.ReadToEnd());
                     }
                 }
                 catch (Exception ex)
-                { }
-                
+                { MessageBox.Show(ex.ToString()); }
+
+                try
+                {
+                    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text102.txt"))
+                    {
+                        writer.Write(reader5.ReadToEnd());
+                    }
+                }
+                catch (Exception ex)
+                { MessageBox.Show(ex.ToString()); }
+
+
+                //try
+                //{
+                //    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text16.txt"))
+                //    {
+                //        writer.Write(reader5.ReadToEnd());
+                //    }
+                //}
+                //catch (Exception ex)
+                //{ MessageBox.Show(ex.ToString()); }
+
+                //try
+                //{
+                //    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text17.txt"))
+                //    {
+                //        writer.Write(reader5.ReadToEnd());
+                //    }
+                //}
+                //catch (Exception ex)
+                //{ MessageBox.Show(ex.ToString()); }
+
+                //try
+                //{
+                //    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text18.txt"))
+                //    {
+                //        writer.Write(reader5.ReadToEnd());
+                //    }
+                //}
+                //catch (Exception ex)
+                //{ MessageBox.Show(ex.ToString()); }
+
+                //try
+                //{
+                //    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text19.txt"))
+                //    {
+                //        writer.Write(reader5.ReadToEnd());
+                //    }
+                //}
+                //catch (Exception ex)
+                //{ MessageBox.Show(ex.ToString()); }
+
+                //try
+                //{
+                //    using (StreamReader reader5 = File.OpenText(st + "\\TempChanges\\text20.txt"))
+                //    {
+                //        writer.Write(reader5.ReadToEnd());
+                //    }
+                //}
+                //catch (Exception ex)
+                //{ MessageBox.Show(ex.ToString()); }
+
             }
+
             return ("1");
+
+          
         }
     }
 }

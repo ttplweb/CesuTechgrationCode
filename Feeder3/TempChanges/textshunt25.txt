@@ -1,0 +1,5 @@
+
+[SHUNT CAPACITOR SETTING]
+FORMAT_SHUNTCAPACITORSETTING=SectionID,DeviceNumber,DeviceStage,Location,Connection,FixedKVARA,FixedKVARB,FixedKVARC,FixedLossesA,FixedLossesB,FixedLossesC,SwitchedKVARA,SwitchedKVARB,SwitchedKVARC,SwitchedLossesA,SwitchedLossesB,SwitchedLossesC,ByPhase,VoltageOverride,VoltageOverrideOn,VoltageOverrideOff,VoltageOverrideDeadband,KV,Control,OnValueA,OnValueB,OnValueC,OffValueA,OffValueB,OffValueC,SwitchingMode,InitiallyClosedPhase,ControllingPhase,SensorLocation,ControlledNodeId,PythonDeviceScriptID,ShuntCapacitorID,ConnectionStatus,CTConnection,InterruptingRating
+
+BB_5577,SC_2,,L,,0,0,,,,0,0,0,0,0,0,0,0,,1,0,0,12.7,0,0,1,,,,0,1,,,,,,3P_12.7KV_300KVAR,0,,

@@ -1,46 +1,50 @@
 <?xml version="1.0" standalone="yes"?>
 <Connection>
   <GIS_Database>
-    <Server>192.168.1.84</Server>
+    <Server>192.168.1.14\SQLEXPRESS</Server>
     <Username>sa</Username>
-    <Password>ttpl@987</Password>
-    <DataBase_Name>tpcentralodisha</DataBase_Name>
-    <Database_Type>SDE</Database_Type>
+    <Password>ttpl@123</Password>
+    <DataBase_Name>Vietnam_ASIS</DataBase_Name>
+    <Database_Type>dbo</Database_Type>
     <Schema_Name>dbo</Schema_Name>
-    <SDEPath>sde:sqlserver:172.18.0.17\CESU</SDEPath>
+    <Schema_Name1>dbo</Schema_Name1>
+    <SDEPath>D:\SDE\192.168.1.84_BYPLPROD.sde</SDEPath>
+    <TYPE>True</TYPE>
   </GIS_Database>
   <Network_Database>
-    <Net_Server>192.168.1.84</Net_Server>
-    <Net_Database>CYME_NET</Net_Database>
+    <Net_Server>192.168.1.14\SQLEXPRESS</Net_Server>
+    <Net_Database>CYME_VIETNAM_NET</Net_Database>
     <Net_Username>sa</Net_Username>
-    <Net_Password>ttpl@987</Net_Password>
+    <Net_Password>ttpl@123</Net_Password>
   </Network_Database>
+  <Profile_Database>
+    <Profile_Server>192.168.1.177</Profile_Server>
+    <Profile_Databasename>CYME_SBPDCL_PROFILE_PRODUCTION</Profile_Databasename>
+    <Profile_Username>nishant</Profile_Username>
+    <Profile_Password>nish@8300</Profile_Password>
+  </Profile_Database>
   <Mdas>
     <Mdas_Server>192.168.1.84</Mdas_Server>
-    <Mdas_Database>CYME_TechGration</Mdas_Database>
+    <Mdas_Database />
     <Mdas_Username>sa</Mdas_Username>
     <Mdas_Password>ttpl@987</Mdas_Password>
   </Mdas>
-  <TechGration>
-    <TG_Server>192.168.1.84</TG_Server>
-    <TG_Database>CYME_TechGration</TG_Database>
-    <TG_Username>sa</TG_Username>
-    <TG_Password>ttpl@987</TG_Password>
-  </TechGration>
   <Equipment_Database>
-    <Server>192.168.1.84</Server>
-    <Database>CYME_EQP</Database>
+    <Server>192.168.1.14\SQLEXPRESS</Server>
+    <Database>CYME_VIETNAM_EQP</Database>
     <Username>sa</Username>
-    <Password>ttpl@987</Password>
+    <Password>ttpl@123</Password>
   </Equipment_Database>
   <Text_Record>
-    <XML_PATH>E:\TECHGRATION\CESU\Tech-Gration\ConfigFile\Configfile.xml</XML_PATH>
+    <XML_PATH>D:\vishal all data\OLD DATA\2025\Rajib Sir\LATEST VIETNAM\TechGration\TechGration\ConfigFile\Configfile.xml</XML_PATH>
+    <DTCSV_PATH>D:\vishal all data\OLD DATA\2025\Rajib Sir\LATEST VIETNAM\TechGration\TechGration\LoadExel\LoadCYME_20250715_123732_FULL_EDIT_Amit sir.csv</DTCSV_PATH>
+    <Meter_PATH>C:\Users\Administrator\Downloads\PROFILETEST1.csv</Meter_PATH>
     <FMECYMDIST>E:\Deepak Mails\Desktop\errorlog</FMECYMDIST>
-    <CYMDIST>C:\CYME</CYMDIST>
-    <Error_Log>D:\Nishant\CESU Project\Nishant\error</Error_Log>
+    <CYMDIST>C:\CYME\Rev4.0</CYMDIST>
+    <Error_Log>D:\vishal all data\OLD DATA\2025\Rajib Sir\LATEST VIETNAM\TechGration\TechGration\ErrorLog</Error_Log>
     <Residential>0.85</Residential>
     <Industrial>0.90</Industrial>
-    <FeederProcessCount>1</FeederProcessCount>
+    <FeederProcessCount>4</FeederProcessCount>
   </Text_Record>
   <ExtractionType>
     <Type>Manual</Type>
@@ -52,4 +56,26 @@
   <CymDatabaseType>
     <Type>MSSQL</Type>
   </CymDatabaseType>
+  <GIS_RECORD>
+    <KEY>VISHAL</KEY>
+  </GIS_RECORD>
+  <TG_Database>
+    <Server>18.10.11.141</Server>
+    <Username>nauser</Username>
+    <Password>N@U$er@Cyme</Password>
+    <DataBase_Name>CymeWebMsedclAdminDB</DataBase_Name>
+    <Database_Type>dbo</Database_Type>
+  </TG_Database>
+  <Date_Time>
+    <ForDate>2025-07-24</ForDate>
+    <ToDate>2025-04-06</ToDate>
+    <FromDate>2025-04-02</FromDate>
+    <ForDate_Peak>2025-07-24</ForDate_Peak>
+    <ToDate_Peak>2025-04-06</ToDate_Peak>
+    <FromDate_Peak>2025-04-03</FromDate_Peak>
+    <TYPE>ForDate</TYPE>
+    <TYPE1>ForDate</TYPE1>
+    <Meter_Demand>True</Meter_Demand>
+    <Peak_Demand>False</Peak_Demand>
+  </Date_Time>
 </Connection>

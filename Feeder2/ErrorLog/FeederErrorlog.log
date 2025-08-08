@@ -1,11 +1,13 @@
 
 ------------------------------------------------------------------
 
-FeederID                             14092/01         
+FeederID                             14297/401         
                        
-Start DateTime                       18/11/2022  04:19:19:PM                                                                              
+Start DateTime                       17/07/2023  04:01:33:PM                                                                              
 
 
-SWITCHGEAR GISID-02SG36     Data Not Avilable in MAKE
+FUSE GISID-FU00003401     Data Not Avilable in Rating
+FUSE GISID-FU00003402     Data Not Avilable in Rating
+FUSE GISID-FU00003403     Data Not Avilable in Rating
 
-End DateTime                         18/11/2022  04:21:10:PM
+End DateTime                         17/07/2023  04:01:45:PM

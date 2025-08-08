@@ -1,0 +1,79 @@
+
+[DEVICEUDD]
+FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
+DT_801,5,DTCName,8,MBA NK Thanh Tân
+DT_803,5,DTCName,8,MBA Đông Thái 3
+DT_808,5,DTCName,8,Vinh Phú 3
+DT_821,5,DTCName,8,Phường Hóp
+DT_835,5,DTCName,8,MBA Lộc Lợi 3
+DT_848,5,DTCName,8,Xuân Lập
+DT_884,5,DTCName,8,MBA Vinh Phú
+DT_890,5,DTCName,8,MBA TDC Phong Xuân
+DT_891,5,DTCName,8,MBA Đông Thái
+DT_897,5,DTCName,8,MBA Hiền An 2
+DT_901,5,DTCName,8,MBA tây Sơn 2
+DT_903,5,DTCName,8,MBA Tấn Hoàng
+DT_913,5,DTCName,8,MBA Đồng Lâm 1
+DT_915,5,DTCName,8,MBA Lộc Lợi 2
+DT_918,5,DTCName,8,Vinh Phú 2 mới
+DT_922,5,DTCName,8,MBA Vĩnh Hương
+DT_928,5,DTCName,8,MBA Phước Thọ
+DT_931,5,DTCName,8,MBA Phổ lại
+DT_937,5,DTCName,8,MBA TC XM Đồng Lâm 6
+DT_958,5,DTCName,8,MBA TC XM Đồng Lâm 5
+DT_960,5,DTCName,8,MBA Tây Sơn 4
+DT_961,5,DTCName,8,MBA TĐC Phong Sơn
+DT_964,5,DTCName,8,MBA TĐC Mỏ Đá Đồng Lâm
+DT_971,5,DTCName,8,MBA Bến Củi
+DT_982,5,DTCName,8,MBA Lộc lợi 1
+DT_1017,5,DTCName,8,MBA Phong Hòa
+DT_1021,5,DTCName,8,MBA Hiền an
+DT_1028,5,DTCName,8,MBA Bơm Tân Quang
+DT_1045,5,DTCName,8,MBA Đồng Lâm 2
+DT_1049,5,DTCName,8,MBA Phong Xuân
+FU_1814,14,DTCName,8,Bộ FCO 479-7/138/57 Lộc Lợi 1
+FU_1817,14,DTCName,8,Bộ FCO TBA TĐC Phong Sơn
+FU_1819,14,DTCName,8,Bộ FCO rẽ Lộc lợi 2
+FU_1833,14,DTCName,8,Bộ FCO TBA tây Sơn 2
+FU_1857,14,DTCName,8,Bộ FCO TBA TĐC Phong Xuân
+FU_1862,14,DTCName,8,Bộ FCO TBA Đông Thái 3
+FU_1866,14,DTCName,8,Bộ FCO TBA Phước Thọ
+FU_1877,14,DTCName,8,Bộ FCO TBA Lộc Lợi 3
+FU_1878,14,DTCName,8,Bộ FCO TBA Phong Hòa
+FU_1885,14,DTCName,8,Bộ FCO 471-7/205/1 Thanh Tân
+FU_1920,14,DTCName,8,Bộ FCO TBA Đông Thái
+FU_1921,14,DTCName,8,Bộ FCO TBA Vinh Phú 2
+FU_1923,14,DTCName,8,Bộ FCO 479-7/89/1 Phổ Lại
+FU_1929,14,DTCName,8,Bộ FCO TBA Phường Hóp
+FU_1930,14,DTCName,8,Bộ FCO TBA Vĩnh Hương
+FU_1945,14,DTCName,8,Bộ FCO 479-7/178 Hiền An
+FU_1953,14,DTCName,8,Bộ FCO 479-7/31/1 Phường Hóp
+FU_1960,14,DTCName,8,Bộ FCO 479-7/12 Hiền An 2
+FU_2037,14,DTCName,8,Bộ FCO TBA NK Thanh Tân
+FU_2069,14,DTCName,8,Bộ FCO TBA TC XM Đồng Lâm 5
+FU_2076,14,DTCName,8,Bộ FCO TBA TĐC Mỏ Đá Đồng Lâm
+FU_2078,14,DTCName,8,Bộ FCO TBA TBA Tấn Hoàng
+FU_2080,14,DTCName,8,Bộ FCO TBA Lộc lợi 1
+FU_2085,14,DTCName,8,Bộ FCO TBA Đồng Lâm 1
+FU_2096,14,DTCName,8,Bộ FCO TBA Hiền an
+FU_2100,14,DTCName,8,Bộ FCO 479-7/12-1/1 TĐC Phong Xuân
+FU_2124,14,DTCName,8,Bộ FCO TBA Bến Củi
+FU_2142,14,DTCName,8,Bộ FCO TBA Phổ lại
+FU_2145,14,DTCName,8,Bộ FCO TBA Vinh Phú 3
+FU_2148,14,DTCName,8,Bộ FCO 479-7/24/1 Bơm Tân Quang
+FU_2169,14,DTCName,8,Bộ FCO TBA Đồng Lâm 2
+FU_2182,14,DTCName,8,FCO 471-7/183/1 TĐC Phong Sơn
+FU_2195,14,DTCName,8,Bộ FCO TBA Lộc Lợi 2
+FU_2200,14,DTCName,8,Bộ FCO TBA Phong Xuân
+FU_2201,14,DTCName,8,Bộ FCO TBA Xuân lập
+FU_2205,14,DTCName,8,Bộ FCO TBA Bơm Tân Quang
+FU_2223,14,DTCName,8,Bộ FCO TBA Vinh Phú
+FU_2224,14,DTCName,8,Bộ FCO TBA TC XM Đồng Lâm 6
+FU_2229,14,DTCName,8,Bộ FCO TBA Tây Sơn 4
+FU_2257,14,DTCName,8,Bộ FCO TBA Hiền An 2
+SW_2206,13,DTCName,8,LBS 479-7A/124 Phong Xuân
+SG_1888,8,DTCName,8,Bộ DCL 477-7/38/1 Phước Thọ
+SG_1889,8,DTCName,8,Bộ ALTD 479-7/158 Phong Xuân
+SG_1896,8,DTCName,8,Bộ DCL 479-7/37 Vĩnh Hương
+SG_2043,8,DTCName,8,Bộ DCL 479-7/124 Phong Xuân
+SG_2211,8,DTCName,8,Bộ DCL 479-7/210 Tây Sơn

@@ -1,0 +1,3 @@
+
+[PHOTOVOLTAIC SETTINGS]
+FORMAT_PHOTOVOLTAICSETTING=SectionID,Location,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,EquipmentID,NumberOfGenerators,SymbolSize,NS,NP,AmbientTemperature,FaultContributionBasedOnRatedPower,FaultContributionUnit,FaultContribution,ConstantInsolation,ForceT0,InsolationModelID,FrequencySourceID,SourceHarmonicModelType,PulseNumber,FiringAngle,OverlapAngle,ConnectionStatus,ConnectionConfiguration,CTConnection,Phase

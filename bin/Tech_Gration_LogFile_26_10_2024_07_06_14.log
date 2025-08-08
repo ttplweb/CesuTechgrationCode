@@ -1,0 +1,51 @@
+              ==================================================================
+              Product Information
+              Tech-Gration Error Log File for MSEDCL 
+              Version 8.1
+              ==================================================================
+
+
+              Extraction process
+
+              Beginning Date 26/10/2024
+              Beginning time 07:06:14:PM
+
+Total Selected Network - 68
+------------------------------------------------------------------
+
+FeederID                             012/226001/301         
+                       
+Start DateTime                       26/10/2024  07:06:14:PM                                                                              
+
+
+Status = Import Successful
+
+
+End DateTime                         26/10/2024  07:07:37:PM
+
+------------------------------------------------------------------
+
+FeederID                             012/226001/303         
+                       
+Start DateTime                       26/10/2024  07:06:15:PM                                                                              
+
+
+Status = Import Successful
+
+
+End DateTime                         26/10/2024  07:07:37:PM
+
+------------------------------------------------------------------
+
+FeederID                             012/226001/304         
+                       
+Start DateTime                       26/10/2024  07:06:15:PM                                                                              
+
+
+SWITCHGEAR OBJECTID-3815     Data Not Avilable in SymmetricalBreakingCurrent
+SWITCHGEAR OBJECTID-3816     Data Not Avilable in SymmetricalBreakingCurrent
+
+Status = Import Successful
+
+
+End DateTime                         26/10/2024  07:07:37:PM

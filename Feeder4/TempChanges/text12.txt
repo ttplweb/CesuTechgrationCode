@@ -1,0 +1,10 @@
+
+[SWITCH SETTING]
+FORMAT_SWITCHSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,CoordX,CoordY,ClosedPhase,Locked,RC,NStatus,PhPickup,GrdPickup,Alternate,PhAltPickup,GrdAltPickup,FromNodeID,FaultIndicator,Automated,SensorMode,Strategic,RestorationMode,ConnectionStatus,ByPassOnRestoration,Reversible
+
+OH_5558,S,22 KV_400A,SW_1896,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_4841,L,22 KV_400A,SW_2211,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_4657,S,22 KV_400A,SW_1888,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_4835,L,22 KV_400A,SW_2043,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5550,L,22 KV_400A,SW_1889,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_4646,S,22 KV_630A,SW_2206,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1

@@ -1,0 +1,5 @@
+
+[HEADNODES] 
+FORMAT_HEADNODES=NodeID,NetworkID,ConnectorIndex,StructureID,HarmonicEnveloppe,EquivalentSourceConfiguration,EquivalentSourceSinglePhaseCT,EquivSourceCenterTapPhase,BackgroundHarmonicVoltage
+
+755039.963435382_1832344.66612985,PHDIEN-477,0,,0,0,0,0,0

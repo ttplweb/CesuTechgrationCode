@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace TechGration.AppCode
 {
     class CymeFileCreate
     {
+
+
         public void savebuttonwork(string NEWGETFILE,string GETFILE,ConfigFileData cf)
         {
             try
@@ -74,6 +77,56 @@ namespace TechGration.AppCode
             }
             catch (Exception ex)
             { }
+        }
+
+        private Process process;
+
+        public void import(string path, string workdir,string path1)
+        {
+            System.Threading.Thread.Sleep(100); // Optional delay
+
+            using (var process = new Process())
+            {
+                process.StartInfo = new ProcessStartInfo
+                {
+                    FileName = path,
+                    CreateNoWindow = true,
+                    UseShellExecute = false,
+                    RedirectStandardError = true,
+                    RedirectStandardOutput = true
+                };
+
+                process.Start();
+                process.WaitForExit();
+            }
+
+
+
+
+            //bool importfeeder = false;
+            //string str_Path2 = path;
+            //string Net2 = workdir;
+            //if (str_Path2 == path)
+            //{
+            //    System.Threading.Thread.Sleep(100);
+            //    importfeeder = true;
+            //}
+
+            //if (importfeeder == true)
+            //{
+            //    ProcessStartInfo processInfo;
+            //    processInfo = new ProcessStartInfo(str_Path2);
+            //    processInfo.CreateNoWindow = true;
+            //    processInfo.UseShellExecute = false;
+            //    // *** Redirect the output ***
+            //    processInfo.RedirectStandardError = true;
+            //    processInfo.RedirectStandardOutput = true;
+
+            //    process = Process.Start(processInfo);
+            //    process.WaitForExit();
+            //    importfeeder = false;
+            //}
+
         }
     }
 }

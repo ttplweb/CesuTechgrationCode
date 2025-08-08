@@ -1,0 +1,6 @@
+
+[SECTION]
+FORMAT_SECTION=SectionID,FromNodeID,FromNodeIndex,ToNodeID,ToNodeIndex,Phase,ZoneID,SubNetworkId,EnvironmentID 
+FORMAT_FEEDER=NetworkID,HeadNodeID,CoordSet,Year,Description,Color,LoadFactor,LossLoadFactorK,Group1,Group2,Group3,Group4,Group5,TagText,TagProperties,TagDeltaX,TagDeltaY,TagAngle,TagAlignment,TagBorder,TagBackground,TagTextColor,TagBorderColor,TagBackgroundColor,TagLocation,TagFont,TagTextSize,TagOffset,Version,EnvironmentID
+
+FEEDER=PHDIEN-472,755030.405697971_1832351.77484815,1,0,,,,,110kV Phong Điền,22KV,HPC,,,,,,,,,,,,,,,,,,-1,0

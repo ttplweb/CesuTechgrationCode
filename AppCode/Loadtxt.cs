@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TechGration.AppCode
 {
@@ -21,10 +22,7 @@ namespace TechGration.AppCode
                 StreamWriter tw = File.AppendText(st + "\\TempChanges\\load1.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                  
                     //write into text file
 
                     OleDbDataReader reader = cmd.ExecuteReader();
@@ -44,7 +42,7 @@ FORMAT_LOADS=SectionID,DeviceNumber,DeviceStage,Flags,LoadType,Connection,Locati
                             tw.Write("," + reader["DeviceStage"].ToString().Trim());
                             tw.Write("," + reader["Flags"].ToString().Trim());
                             tw.Write("," + reader["LoadType"].ToString().Trim());
-                            tw.Write("," + reader["Connection"].ToString().Trim());
+                            tw.Write("," + reader["Connection_"].ToString().Trim());
                             tw.Write("," + reader["Location"].ToString().Trim());
                             // tw.WriteLine(", " + reader["datetime"].ToString());
                             tw.WriteLine();
@@ -54,10 +52,11 @@ FORMAT_LOADS=SectionID,DeviceNumber,DeviceStage,Flags,LoadType,Connection,Locati
                     tw.Close();
 
                     reader.Close();
-                    conn.Close();
+                   
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw.Close();
                 }
 
@@ -72,10 +71,7 @@ FORMAT_LOADS=SectionID,DeviceNumber,DeviceStage,Flags,LoadType,Connection,Locati
                 StreamWriter tw1 = File.AppendText(st + "\\TempChanges\\load2.txt");
                 try
                 {
-                    if (conn.State != ConnectionState.Open)
-                    {
-                        conn.Open();
-                    }
+                   
 
                     OleDbDataReader reader1 = cmd.ExecuteReader();
                     string str = @"
@@ -96,7 +92,7 @@ FORMAT_CUSTOMERLOADS=SectionID,DeviceNumber,LoadType,CustomerNumber,CustomerType
                             tw1.Write("," + reader1["CustomerType"].ToString().Trim());
                             tw1.Write("," + reader1["ConnectionStatus"].ToString().Trim());
                             tw1.Write("," + reader1["LockDuringLoadAllocation"].ToString().Trim());
-                            tw1.Write("," + reader1["Year"].ToString().Trim());
+                            tw1.Write("," + reader1["Years"].ToString().Trim());
                             tw1.Write("," + reader1["LoadModelID"].ToString().Trim());
                             tw1.Write("," + reader1["NormalPriority"].ToString().Trim());
                             tw1.Write("," + reader1["EmergencyPriority"].ToString().Trim());
@@ -122,10 +118,11 @@ FORMAT_CUSTOMERLOADS=SectionID,DeviceNumber,LoadType,CustomerNumber,CustomerType
                     tw1.Close();
 
                     reader1.Close();
-                    conn.Close();
+                  
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                     tw1.Close();
                 }
             }
@@ -141,7 +138,9 @@ FORMAT_CUSTOMERLOADS=SectionID,DeviceNumber,LoadType,CustomerNumber,CustomerType
                     }
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
 
                 try
                 {
@@ -151,7 +150,9 @@ FORMAT_CUSTOMERLOADS=SectionID,DeviceNumber,LoadType,CustomerNumber,CustomerType
                     }
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
 
                 try
                 {
@@ -161,7 +162,9 @@ FORMAT_CUSTOMERLOADS=SectionID,DeviceNumber,LoadType,CustomerNumber,CustomerType
                     }
                 }
                 catch (Exception ex)
-                { }
+                {
+                    MessageBox.Show(ex.ToString());
+                }
 
             }
 

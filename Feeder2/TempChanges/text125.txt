@@ -1,0 +1,11 @@
+
+[RECLOSER SETTING]
+FORMAT_RECLOSERSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,CoordX,CoordY,ClosedPhase,Locked,RC,NStatus,TCCID,PhPickup,GrdPickup,Alternate,PhAltPickup,GrdAltPickup,FromNodeID,EnableReclosing,FaultIndicator,EnableFuseSaving,MinRatedCurrentForFuseSaving,Automated,SensorMode,Strategic,RestorationMode,ConnectionStatus,TCCRepositoryID,TCCRepositoryAlternateID1,TCCRepositoryAlternateID2,TCCRepositoryAlternateID3,TCCRepositoryAlternateID4,TCCRepositoryAlternateID5,TCCRepositoryAlternateID6,TCCRepositoryAlternateID7,TCCRepositoryAlternateID8,TCCRepositoryAlternateID9,TCCRepositoryAlternateID10,IntellirupterTCCRepositoryID,ByPassOnRestoration,Reversible,TCCSettingsSelection
+
+OH_5608,S,22 KV_630A,RC_2007,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_5518,L,GENERALELECTRIC GEC,RC_2000,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_4781,S,22 KV_630A,RC_2015,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_4800,L,22 KV_630A,RC_2002,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_4676,S,22 KV_630A,RC_2011,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+OH_5442,L,22 KV_630A,RC_2017,,0,0,,,7,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0
+BB_11471,S,22 KV_800A,RC_4176,,0,0,,,0,0,0,0,,0,0,0,0,0,,1,1,0,0,0,0,0,0,0,,,,,,,,,,,,,0,1,0

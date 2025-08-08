@@ -1,0 +1,6 @@
+[GENERAL]
+DATE=August 08, 2025 at 12:20:52
+CYME_VERSION=8.00
+CYMDIST_REVISION=01
+              
+[SI]

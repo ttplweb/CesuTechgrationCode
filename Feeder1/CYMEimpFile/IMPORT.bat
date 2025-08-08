@@ -1,4 +1,4 @@
-C:\CYME\ImpExp.exe I D:\Nishant\CESU Project\Nishant\TechGration\TechGration\Feeder1\CYMEimpFile\IMPORT.ini
+"C:\CYME\Rev4.0\ImpExp.exe" I "D:\vishal all data\OLD DATA\2025\Rajib Sir\LATEST VIETNAM\TechGration\TechGration\Feeder1\CYMEimpFile\IMPORT.ini"
 ^Z
 
 

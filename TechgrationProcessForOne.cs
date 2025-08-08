@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,6 +22,7 @@ namespace TechGration
         private void timer1_Tick(object sender, EventArgs e)
         {
             feed();
+            //savewebstatus();
             DateTime date = DateTime.Now;
             lblTime.Text = date.ToString("hh:mm:ss tt");
         }
@@ -29,12 +31,15 @@ namespace TechGration
         {
             this.timer1.Start();
             this.Refresh();
+            feed();
+           // savewebstatus();
             if (!backgroundWorker1.IsBusy)
             {
                 backgroundWorker1.RunWorkerAsync();
             }
         }
 
+      
         public int persentage()
         {
             int per = 0;
@@ -67,13 +72,14 @@ namespace TechGration
                 lblcompletefeeder.Refresh();
                 lblStatus1.Text = TechgrationConfiguration.Status1;
 
-                labdivision1.Text = "Division        :   " + TechgrationConfiguration.Division1;
+                labdivision1.Text = "Division        :   " + "HPC";
+                //labdivision1.Text = "Division        :   " + TechgrationConfiguration.Division1;
 
                 labSubstation1.Text = "Substation    :   " + TechgrationConfiguration.Substation1;
 
-                labFeederID1.Text = "FeederID      :   " + TechgrationConfiguration.FeederID1;
+               labFeederID1.Text = "FeederID      :   " + TechgrationConfiguration.FeederID1;
 
-                labFeederName1.Text = "Feeder Name :  " + TechgrationConfiguration.FeederName1;
+               // labFeederName1.Text = "Feeder Name :  " + TechgrationConfiguration.FeederName1;
 
                 //lblStatus1.Text = TechgrationConfiguration.Status2;
 
@@ -141,5 +147,7 @@ namespace TechGration
             Environment.Exit(Environment.ExitCode);
             Application.Exit();
         }
+
+         
     }
 }

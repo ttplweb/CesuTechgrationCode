@@ -2,4 +2,4 @@
 [SOURCE EQUIVALENT]
 FORMAT_SOURCEEQUIVALENT=NodeID,LoadModelName,Voltage,OperatingAngle1,OperatingAngle2,OperatingAngle3,PositiveSequenceResistance,PositiveSequenceReactance,NegativeSequenceResistance,NegativeSequenceReactance,ZeroSequenceResistance,ZeroSequenceReactance,OperatingVoltage1,OperatingVoltage2,OperatingVoltage3,BaseMVA,ImpedanceUnit
 
-378109.43_2247739.3,DEFAULT,380,0,120,-120,0,0,0,0,1,2,7.505553,7.505553,7.505553,0,0
+755036.704087448_1832347.10188637,DEFAULT,22KV,0,120,120,0,1,0,1,1,2,7.505553,7.505553,7.505553,0,0

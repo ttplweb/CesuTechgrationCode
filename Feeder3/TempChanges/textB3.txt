@@ -1,0 +1,3 @@
+
+[BESS SETTINGS]
+FORMAT_BESSSETTING=SectionID,Location,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,EquipmentID,Phase,ConnectionStatus,ConnectionConfiguration,CTConnection,SymbolSize,MaximumSOC,MinimumSOC,FaultContributionBasedOnRatedPower,FaultContributionUnit,FaultContribution,FrequencySourceID,SourceHarmonicModelType,PulseNumber,FiringAngle,OverlapAngle,InitialSOC,GridOutput,RiseFallUnit,PowerFallLimit,PowerRiseLimit,ChargeDelayUnit,ChargeDelay,DischargeDelayUnit,DischargeDelay,PythonDeviceScriptID 

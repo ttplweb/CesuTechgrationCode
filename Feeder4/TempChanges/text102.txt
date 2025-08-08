@@ -1,0 +1,3 @@
+
+[WECS SETTINGS]
+FORMAT_WECSSETTING=SectionID,Location,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,EquipmentID,NumberOfGenerators,SymbolSize,ConstantWindSpeed,ForceT0,WindModelID,FrequencySourceID,SourceHarmonicModelType,PulseNumber,FiringAngle,OverlapAngle,ConnectionStatus,ConnectionConfiguration,Phase,FaultContributionBasedOnRatedPower,FaultContributionUnit,FaultContribution,CTConnection

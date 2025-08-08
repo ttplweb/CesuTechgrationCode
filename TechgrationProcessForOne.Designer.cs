@@ -65,9 +65,11 @@ namespace TechGration
             this.groupBox2.Controls.Add(this.labSubstation1);
             this.groupBox2.Controls.Add(this.labdivision1);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(211, 151);
+            this.groupBox2.Location = new System.Drawing.Point(281, 186);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(434, 165);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(579, 203);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Running Feeder";
@@ -76,9 +78,10 @@ namespace TechGration
             // 
             this.labFeederID1.AutoSize = true;
             this.labFeederID1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederID1.Location = new System.Drawing.Point(13, 137);
+            this.labFeederID1.Location = new System.Drawing.Point(17, 151);
+            this.labFeederID1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeederID1.Name = "labFeederID1";
-            this.labFeederID1.Size = new System.Drawing.Size(66, 13);
+            this.labFeederID1.Size = new System.Drawing.Size(83, 17);
             this.labFeederID1.TabIndex = 13;
             this.labFeederID1.Text = "FeederID1";
             // 
@@ -86,9 +89,10 @@ namespace TechGration
             // 
             this.lblStatus1.AutoSize = true;
             this.lblStatus1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus1.Location = new System.Drawing.Point(13, 30);
+            this.lblStatus1.Location = new System.Drawing.Point(17, 49);
+            this.lblStatus1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus1.Name = "lblStatus1";
-            this.lblStatus1.Size = new System.Drawing.Size(58, 13);
+            this.lblStatus1.Size = new System.Drawing.Size(73, 17);
             this.lblStatus1.TabIndex = 18;
             this.lblStatus1.Text = "Status1 :";
             // 
@@ -96,19 +100,22 @@ namespace TechGration
             // 
             this.labFeederName1.AutoSize = true;
             this.labFeederName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederName1.Location = new System.Drawing.Point(11, 109);
+            this.labFeederName1.Location = new System.Drawing.Point(17, 177);
+            this.labFeederName1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labFeederName1.Name = "labFeederName1";
-            this.labFeederName1.Size = new System.Drawing.Size(85, 13);
+            this.labFeederName1.Size = new System.Drawing.Size(109, 17);
             this.labFeederName1.TabIndex = 12;
             this.labFeederName1.Text = "FeederName1";
+            this.labFeederName1.Visible = false;
             // 
             // labSubstation1
             // 
             this.labSubstation1.AutoSize = true;
             this.labSubstation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labSubstation1.Location = new System.Drawing.Point(13, 84);
+            this.labSubstation1.Location = new System.Drawing.Point(17, 118);
+            this.labSubstation1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labSubstation1.Name = "labSubstation1";
-            this.labSubstation1.Size = new System.Drawing.Size(78, 13);
+            this.labSubstation1.Size = new System.Drawing.Size(99, 17);
             this.labSubstation1.TabIndex = 11;
             this.labSubstation1.Text = "Substation 1";
             // 
@@ -116,25 +123,28 @@ namespace TechGration
             // 
             this.labdivision1.AutoSize = true;
             this.labdivision1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labdivision1.Location = new System.Drawing.Point(13, 58);
+            this.labdivision1.Location = new System.Drawing.Point(17, 82);
+            this.labdivision1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labdivision1.Name = "labdivision1";
-            this.labdivision1.Size = new System.Drawing.Size(59, 13);
+            this.labdivision1.Size = new System.Drawing.Size(74, 17);
             this.labdivision1.TabIndex = 10;
             this.labdivision1.Text = "Division1";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 34);
+            this.label4.Location = new System.Drawing.Point(17, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 9;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(215, 325);
+            this.progressBar1.Location = new System.Drawing.Point(287, 400);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(430, 25);
+            this.progressBar1.Size = new System.Drawing.Size(573, 31);
             this.progressBar1.TabIndex = 18;
             // 
             // groupBox1
@@ -144,10 +154,12 @@ namespace TechGration
             this.groupBox1.Controls.Add(this.lblselectedfeeder);
             this.groupBox1.Controls.Add(this.lblTotalfeeder);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 96);
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.groupBox1.Location = new System.Drawing.Point(7, 118);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(180, 136);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(267, 167);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status";
@@ -156,9 +168,10 @@ namespace TechGration
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(18, 111);
+            this.lblTime.Location = new System.Drawing.Point(19, 137);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(51, 16);
+            this.lblTime.Size = new System.Drawing.Size(62, 20);
             this.lblTime.TabIndex = 16;
             this.lblTime.Text = "Time :";
             // 
@@ -166,9 +179,10 @@ namespace TechGration
             // 
             this.lblcompletefeeder.AutoSize = true;
             this.lblcompletefeeder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcompletefeeder.Location = new System.Drawing.Point(17, 87);
+            this.lblcompletefeeder.Location = new System.Drawing.Point(19, 107);
+            this.lblcompletefeeder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcompletefeeder.Name = "lblcompletefeeder";
-            this.lblcompletefeeder.Size = new System.Drawing.Size(136, 16);
+            this.lblcompletefeeder.Size = new System.Drawing.Size(164, 20);
             this.lblcompletefeeder.TabIndex = 15;
             this.lblcompletefeeder.Text = "Complete Feeder :";
             // 
@@ -176,9 +190,10 @@ namespace TechGration
             // 
             this.lblselectedfeeder.AutoSize = true;
             this.lblselectedfeeder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblselectedfeeder.Location = new System.Drawing.Point(18, 58);
+            this.lblselectedfeeder.Location = new System.Drawing.Point(17, 71);
+            this.lblselectedfeeder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblselectedfeeder.Name = "lblselectedfeeder";
-            this.lblselectedfeeder.Size = new System.Drawing.Size(132, 16);
+            this.lblselectedfeeder.Size = new System.Drawing.Size(158, 20);
             this.lblselectedfeeder.TabIndex = 14;
             this.lblselectedfeeder.Text = "Selected Feeder :";
             // 
@@ -186,9 +201,10 @@ namespace TechGration
             // 
             this.lblTotalfeeder.AutoSize = true;
             this.lblTotalfeeder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalfeeder.Location = new System.Drawing.Point(18, 31);
+            this.lblTotalfeeder.Location = new System.Drawing.Point(19, 38);
+            this.lblTotalfeeder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalfeeder.Name = "lblTotalfeeder";
-            this.lblTotalfeeder.Size = new System.Drawing.Size(106, 16);
+            this.lblTotalfeeder.Size = new System.Drawing.Size(127, 20);
             this.lblTotalfeeder.TabIndex = 13;
             this.lblTotalfeeder.Text = "Total Feeder :";
             // 
@@ -196,9 +212,10 @@ namespace TechGration
             // 
             this.lblPersentageStatus.AutoSize = true;
             this.lblPersentageStatus.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersentageStatus.Location = new System.Drawing.Point(106, 325);
+            this.lblPersentageStatus.Location = new System.Drawing.Point(141, 400);
+            this.lblPersentageStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPersentageStatus.Name = "lblPersentageStatus";
-            this.lblPersentageStatus.Size = new System.Drawing.Size(86, 24);
+            this.lblPersentageStatus.Size = new System.Drawing.Size(108, 29);
             this.lblPersentageStatus.TabIndex = 22;
             this.lblPersentageStatus.Text = "Status :";
             // 
@@ -216,35 +233,38 @@ namespace TechGration
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 267);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 329);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(82, 80);
+            this.pictureBox2.Size = new System.Drawing.Size(109, 98);
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 27);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 68);
+            this.pictureBox1.Size = new System.Drawing.Size(267, 84);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(211, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(281, 1);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(438, 144);
+            this.pictureBox3.Size = new System.Drawing.Size(584, 177);
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
             // TechgrationProcessForOne
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 359);
+            this.ClientSize = new System.Drawing.Size(868, 432);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -253,11 +273,12 @@ namespace TechGration
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(669, 398);
-            this.MinimumSize = new System.Drawing.Size(669, 398);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(886, 479);
+            this.MinimumSize = new System.Drawing.Size(886, 479);
             this.Name = "TechgrationProcessForOne";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TechgrationProcess";
+            this.Text = "Tech-Gration ETL Process";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TechgrationProcessForOne_FormClosing);
             this.Load += new System.EventHandler(this.TechgrationProcessForOne_Load);
             this.groupBox2.ResumeLayout(false);

@@ -1,0 +1,13 @@
+[GENERAL]
+DATE=August 08, 2025 at 12:19:50
+CYME_VERSION=8.00
+CYMDIST_REVISION=01
+
+[SI]
+
+
+[METERDEMAND SETTING]
+
+FORMAT_METERDEMANDSETTING=DeviceType,DeviceNumber,DemandType,Value1A,Value2A,Value1B,Value2B,Value1C,Value2C,Disconnected
+
+

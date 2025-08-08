@@ -1,0 +1,5 @@
+
+[LOAD EQUIVALENT]
+FORMAT_LOADEQUIVALENT=NodeID,LoadModelName,Format,Value1A,Value1B,Value1C,Value2A,Value2B,Value2C,ValueSinglePhaseCT11,ValueSinglePhaseCT12,ValueSinglePhaseCT21,ValueSinglePhaseCT22
+
+755039.963435382_1832344.66612985,DEFAULT,KW_PF,0,0,0,0,0,0,0,0,0,0

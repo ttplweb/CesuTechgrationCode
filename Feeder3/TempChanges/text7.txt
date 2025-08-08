@@ -1,0 +1,9 @@
+
+[UNDERGROUNDLINE SETTING]
+FORMAT_UNDERGROUNDLINESETTING=SectionID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,LineCableID,Length,NumberOfCableInParallel,Amps,Amps_1,Amps_2,Amps_3,Amps_4,ConnectionStatus,CoordX,CoordY,HarmonicModel,EarthResistivity,OperatingTemperature,Height,DistanceBetweenConductors,BondingType,CableConfiguration,DuctMaterial,Bundled,Neutral1Type,Neutral2Type,Neutral3Type,Neutral1ID,Neutral2ID,Neutral3ID,AmpacityDeratingFactor,FlowConstraintActive,FlowConstraintUnit,MaximumFlow
+
+CA_4661,CA_4661,,0,0,3P_22 KV_95SQMM_XLPE,371.33457535,1,0,0,0,0,0,0,0,0,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+CA_5398,CA_5398,,0,0,3P_22 KV_95SQMM_XLPE,1483.36283947,1,0,0,0,0,0,0,0,0,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+CA_5414,CA_5414,,0,0,3P_22 KV_70SQMM_XLPE,12.16879659,1,0,0,0,0,0,0,0,0,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+CA_5595,CA_5595,,0,0,3P_22 KV_185SQMM_XLPE,134.50467444,1,0,0,0,0,0,0,0,0,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100
+CA_5880,CA_5880,,0,0,3P_22 KV_70SQMM_XLPE,12.16879659,1,0,0,0,0,0,0,0,0,2,100,25,0,10,0,2,0,1,29,29,29,,,,1,0,0,100

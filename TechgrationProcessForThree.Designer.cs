@@ -82,7 +82,7 @@ namespace TechGration
             this.groupBox1.Controls.Add(this.lblselectedfeeder);
             this.groupBox1.Controls.Add(this.lblTotalfeeder);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.groupBox1.Location = new System.Drawing.Point(7, 88);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(253, 154);
@@ -163,7 +163,7 @@ namespace TechGration
             // 
             this.lblStatus2.AutoSize = true;
             this.lblStatus2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus2.Location = new System.Drawing.Point(13, 26);
+            this.lblStatus2.Location = new System.Drawing.Point(13, 31);
             this.lblStatus2.Name = "lblStatus2";
             this.lblStatus2.Size = new System.Drawing.Size(58, 13);
             this.lblStatus2.TabIndex = 19;
@@ -173,7 +173,7 @@ namespace TechGration
             // 
             this.labFeederID2.AutoSize = true;
             this.labFeederID2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederID2.Location = new System.Drawing.Point(13, 126);
+            this.labFeederID2.Location = new System.Drawing.Point(13, 117);
             this.labFeederID2.Name = "labFeederID2";
             this.labFeederID2.Size = new System.Drawing.Size(66, 13);
             this.labFeederID2.TabIndex = 13;
@@ -183,17 +183,18 @@ namespace TechGration
             // 
             this.labFeederName2.AutoSize = true;
             this.labFeederName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederName2.Location = new System.Drawing.Point(13, 101);
+            this.labFeederName2.Location = new System.Drawing.Point(170, 92);
             this.labFeederName2.Name = "labFeederName2";
             this.labFeederName2.Size = new System.Drawing.Size(85, 13);
             this.labFeederName2.TabIndex = 12;
             this.labFeederName2.Text = "FeederName2";
+            this.labFeederName2.Visible = false;
             // 
             // labSubstation2
             // 
             this.labSubstation2.AutoSize = true;
             this.labSubstation2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labSubstation2.Location = new System.Drawing.Point(13, 73);
+            this.labSubstation2.Location = new System.Drawing.Point(13, 89);
             this.labSubstation2.Name = "labSubstation2";
             this.labSubstation2.Size = new System.Drawing.Size(78, 13);
             this.labSubstation2.TabIndex = 11;
@@ -203,7 +204,7 @@ namespace TechGration
             // 
             this.labdivision2.AutoSize = true;
             this.labdivision2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labdivision2.Location = new System.Drawing.Point(13, 48);
+            this.labdivision2.Location = new System.Drawing.Point(13, 61);
             this.labdivision2.Name = "labdivision2";
             this.labdivision2.Size = new System.Drawing.Size(59, 13);
             this.labdivision2.TabIndex = 10;
@@ -236,7 +237,7 @@ namespace TechGration
             // 
             this.labFeederID1.AutoSize = true;
             this.labFeederID1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederID1.Location = new System.Drawing.Point(13, 127);
+            this.labFeederID1.Location = new System.Drawing.Point(13, 122);
             this.labFeederID1.Name = "labFeederID1";
             this.labFeederID1.Size = new System.Drawing.Size(66, 13);
             this.labFeederID1.TabIndex = 13;
@@ -246,7 +247,7 @@ namespace TechGration
             // 
             this.lblStatus1.AutoSize = true;
             this.lblStatus1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus1.Location = new System.Drawing.Point(13, 34);
+            this.lblStatus1.Location = new System.Drawing.Point(13, 42);
             this.lblStatus1.Name = "lblStatus1";
             this.lblStatus1.Size = new System.Drawing.Size(58, 13);
             this.lblStatus1.TabIndex = 18;
@@ -256,17 +257,18 @@ namespace TechGration
             // 
             this.labFeederName1.AutoSize = true;
             this.labFeederName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederName1.Location = new System.Drawing.Point(11, 103);
+            this.labFeederName1.Location = new System.Drawing.Point(170, 100);
             this.labFeederName1.Name = "labFeederName1";
             this.labFeederName1.Size = new System.Drawing.Size(85, 13);
             this.labFeederName1.TabIndex = 12;
             this.labFeederName1.Text = "FeederName1";
+            this.labFeederName1.Visible = false;
             // 
             // labSubstation1
             // 
             this.labSubstation1.AutoSize = true;
             this.labSubstation1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labSubstation1.Location = new System.Drawing.Point(13, 82);
+            this.labSubstation1.Location = new System.Drawing.Point(12, 96);
             this.labSubstation1.Name = "labSubstation1";
             this.labSubstation1.Size = new System.Drawing.Size(78, 13);
             this.labSubstation1.TabIndex = 11;
@@ -276,7 +278,7 @@ namespace TechGration
             // 
             this.labdivision1.AutoSize = true;
             this.labdivision1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labdivision1.Location = new System.Drawing.Point(13, 57);
+            this.labdivision1.Location = new System.Drawing.Point(13, 70);
             this.labdivision1.Name = "labdivision1";
             this.labdivision1.Size = new System.Drawing.Size(59, 13);
             this.labdivision1.TabIndex = 10;
@@ -309,7 +311,7 @@ namespace TechGration
             // 
             this.labFeederID3.AutoSize = true;
             this.labFeederID3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederID3.Location = new System.Drawing.Point(13, 127);
+            this.labFeederID3.Location = new System.Drawing.Point(15, 126);
             this.labFeederID3.Name = "labFeederID3";
             this.labFeederID3.Size = new System.Drawing.Size(66, 13);
             this.labFeederID3.TabIndex = 13;
@@ -319,7 +321,7 @@ namespace TechGration
             // 
             this.lblStatus3.AutoSize = true;
             this.lblStatus3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus3.Location = new System.Drawing.Point(13, 34);
+            this.lblStatus3.Location = new System.Drawing.Point(15, 39);
             this.lblStatus3.Name = "lblStatus3";
             this.lblStatus3.Size = new System.Drawing.Size(58, 13);
             this.lblStatus3.TabIndex = 18;
@@ -329,17 +331,18 @@ namespace TechGration
             // 
             this.labFeederName3.AutoSize = true;
             this.labFeederName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFeederName3.Location = new System.Drawing.Point(11, 103);
+            this.labFeederName3.Location = new System.Drawing.Point(133, 103);
             this.labFeederName3.Name = "labFeederName3";
             this.labFeederName3.Size = new System.Drawing.Size(85, 13);
             this.labFeederName3.TabIndex = 12;
             this.labFeederName3.Text = "FeederName3";
+            this.labFeederName3.Visible = false;
             // 
             // labSubstation3
             // 
             this.labSubstation3.AutoSize = true;
             this.labSubstation3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labSubstation3.Location = new System.Drawing.Point(13, 82);
+            this.labSubstation3.Location = new System.Drawing.Point(13, 97);
             this.labSubstation3.Name = "labSubstation3";
             this.labSubstation3.Size = new System.Drawing.Size(78, 13);
             this.labSubstation3.TabIndex = 11;
@@ -349,7 +352,7 @@ namespace TechGration
             // 
             this.labdivision3.AutoSize = true;
             this.labdivision3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labdivision3.Location = new System.Drawing.Point(13, 57);
+            this.labdivision3.Location = new System.Drawing.Point(13, 69);
             this.labdivision3.Name = "labdivision3";
             this.labdivision3.Size = new System.Drawing.Size(59, 13);
             this.labdivision3.TabIndex = 10;
@@ -438,7 +441,7 @@ namespace TechGration
             this.MinimumSize = new System.Drawing.Size(726, 532);
             this.Name = "TechgrationProcessForThree";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TechgrationProcess";
+            this.Text = "Tech-Gration ETL Process";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TechgrationProcessForThree_FormClosing);
             this.Load += new System.EventHandler(this.TechgrationProcessForThree_Load);
             this.groupBox1.ResumeLayout(false);

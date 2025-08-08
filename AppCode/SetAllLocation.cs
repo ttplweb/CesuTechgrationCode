@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TechGration.AppCode
 {
@@ -56,6 +57,7 @@ namespace TechGration.AppCode
                             }
                         }
                     }
+   
                     else if (itemTable == "TGDEVICE_CIRCUITBREAKER")
                     {
                         query = "select tn.GISID,tn.NodeId,ts.SectionID from [" + itemTable + "] ts,[TempNode] tn where ts.DeviceNumber=tn.GISID";
@@ -93,11 +95,11 @@ namespace TechGration.AppCode
                         }
                     }
                 }
-
+            
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -107,12 +109,9 @@ namespace TechGration.AppCode
             try
             {
                 DataTable dtt = new DataTable();
-                using (OleDbCommand com = new OleDbCommand("select [SectionID],[FromNodeId],[ToNodeId] from [TempSection_Breaked]", con))
+                using (OleDbCommand com = new OleDbCommand("select [SectionID],[FromNodeId],[ToNodeId] from [TEMPSECTION-BREAKED]", con))
                 {
-                    if (con.State != ConnectionState.Open)
-                    {
-                        con.Open();
-                    }
+                  
                     OleDbDataReader dr = com.ExecuteReader();
                     dtt.Load(dr);
                     if (dr != null)
@@ -122,12 +121,9 @@ namespace TechGration.AppCode
                 }
                 dt = dtt.Copy();
                 dtt.Clear();
-                using (OleDbCommand com = new OleDbCommand("select [SectionID],[FromNodeId],[ToNodeId] from [TempSection_NotBreaked]", con))
+                using (OleDbCommand com = new OleDbCommand("select [SectionID],[FromNodeId],[ToNodeId] from [TEMPSECTION-NOTBREAKED]", con))
                 {
-                    if (con.State != ConnectionState.Open)
-                    {
-                        con.Open();
-                    }
+                   
                     OleDbDataReader dr = com.ExecuteReader();
                     dtt.Load(dr);
                     if (dr != null)
@@ -139,7 +135,7 @@ namespace TechGration.AppCode
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
             return dt;
         }
@@ -155,7 +151,7 @@ namespace TechGration.AppCode
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -166,10 +162,7 @@ namespace TechGration.AppCode
             {
                 using (OleDbCommand com = new OleDbCommand(query, con))
                 {
-                    if (con.State != ConnectionState.Open)
-                    {
-                        con.Open();
-                    }
+                 
                     OleDbDataReader dr = com.ExecuteReader();
                     dt.Load(dr);
                     if (dr != null)
@@ -180,7 +173,7 @@ namespace TechGration.AppCode
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
             return dt;
         }

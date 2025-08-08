@@ -1,0 +1,110 @@
+
+[DEVICEUDD]
+FORMAT_DEVICEUDD=DeviceNumber,DeviceType,DataId,DataType,DataValue
+DT_804,5,DTCName,8,MBA HUỳnh Liên
+DT_814,5,DTCName,8,MBA Phong Mỹ 3
+DT_818,5,DTCName,8,MBA Trạch Tả
+DT_828,5,DTCName,8,MBA Hòa bắc
+DT_837,5,DTCName,8,Khe Trăng
+DT_843,5,DTCName,8,MBA Nam Phong 1
+DT_849,5,DTCName,8,MBA Phò trạch 7
+DT_851,5,DTCName,8,MBA Phò Trạch 3
+DT_854,5,DTCName,8,MBA Hạ Long
+DT_866,5,DTCName,8,MBA Trạch Thượng
+DT_867,5,DTCName,8,MBA Công an huyện Phong Điền
+DT_871,5,DTCName,8,MBA TC TRẠM 220KV
+DT_876,5,DTCName,8,MBA TH Ga Phò Trạch
+DT_878,5,DTCName,8,MBA Huỳnh Trúc
+DT_889,5,DTCName,8,MBA Đông Thái 2
+DT_896,5,DTCName,8,MBA Phong Mỹ 5
+DT_905,5,DTCName,8,MBA Phong Thu
+DT_914,5,DTCName,8,MBA Trạm sạc Vinfast
+DT_926,5,DTCName,8,MBA An Thôn
+DT_935,5,DTCName,8,MBA Nam Phong 3
+DT_942,5,DTCName,8,MBA Phò Trạch 9
+DT_947,5,DTCName,8,MBA TT BTTT
+DT_951,5,DTCName,8,MBA NM NƯỚC PHONG ĐIỀN
+DT_959,5,DTCName,8,MBA Tây Phong
+DT_962,5,DTCName,8,MBA Vi Sinh 1
+DT_963,5,DTCName,8,MBA Nam Phong 2
+DT_974,5,DTCName,8,MBA Phò Trạch 5
+DT_975,5,DTCName,8,MBA Tân Mỹ 1
+DT_981,5,DTCName,8,MBA TC Cầu Tỉnh Lộ 17
+DT_995,5,DTCName,8,Phò Trạch 4
+DT_998,5,DTCName,8,MBA Hưng Thái mới
+DT_1000,5,DTCName,8,MBA Bơm cấp nước Viglacera
+DT_1001,5,DTCName,8,MBA Phong Mỹ 4
+DT_1002,5,DTCName,8,MBA Trường cấp 2_3 Phong Điền
+DT_1011,5,DTCName,8,MBA Cao Su Huy Anh
+DT_1014,5,DTCName,8,MBA Phò trạch 2 mới
+DT_1025,5,DTCName,8,MBA Tân Mỹ 2
+DT_1033,5,DTCName,8,MBA Phò Trạch 1
+DT_1041,5,DTCName,8,Trạch Thượng 2
+DT_1055,5,DTCName,8,MBA Bắc Ô Lâu
+FU_1815,14,DTCName,8,Bộ FCO 477-7/277/1 Phong Mỹ 5
+FU_1818,14,DTCName,8,Bộ FCO TBA TC Cầu Tỉnh Lộ 17
+FU_1824,14,DTCName,8,Bộ FCO TBA Trạch Tả
+FU_1829,14,DTCName,8,Bộ FCO TBA NM NƯỚC PHONG ĐIỀN
+FU_1830,14,DTCName,8,Bộ FCO TBA Tân Mỹ 2
+FU_1832,14,DTCName,8,Bộ FCO TBA Hòa bắc
+FU_1844,14,DTCName,8,Bộ FCO rẽ trạm vinfast
+FU_1867,14,DTCName,8,Bộ FCO TBA Phong Mỹ 4
+FU_1868,14,DTCName,8,Bộ FCO TBA Khe Trăng
+FU_1869,14,DTCName,8,Bộ FCO TBA Nam Phong 3
+FU_1872,14,DTCName,8,Bộ FCO 477-7/84/1 Phò Trạch 7
+FU_1884,14,DTCName,8,Bộ FCO 477-7/202/1 Hưng Thái
+FU_1911,14,DTCName,8,Bộ FCO 477-7/360 Bắc Ô Lâu
+FU_1912,14,DTCName,8,Bộ FCO 477-7/55 Cấp 2-3 Phong ĐIền
+FU_1918,14,DTCName,8,Bộ FCO TBA Trường cấp 2_3 Phong Điền
+FU_1919,14,DTCName,8,Bộ FCO TBA Trạch thượng 2
+FU_1928,14,DTCName,8,Bộ FCO TBA Huỳnh Liên
+FU_1943,14,DTCName,8,Bộ FCO TBA PHÒ TRẠCH 9
+FU_1947,14,DTCName,8,Bộ FCO TBA Cao Su Huy Anh
+FU_1952,14,DTCName,8,Bộ FCO 477-7/148 NMN Phong Thu
+FU_1972,14,DTCName,8,Bộ FCO 477-7/359/1 Khe Trăng
+FU_1982,14,DTCName,8,Bộ FCO 477-7/32/1 Đi công an Huyện
+FU_1983,14,DTCName,8,Bộ FCO TBA Công an huyện Phong Điền
+FU_1984,14,DTCName,8,Bộ FCO 477-7/167Rẽ An Thôn
+FU_2058,14,DTCName,8,Bộ FCO TBA Tân Mỹ 1
+FU_2072,14,DTCName,8,Bộ FCO TBA Phò trạch 7
+FU_2073,14,DTCName,8,Bộ FCO TBA Đông Thái 2
+FU_2081,14,DTCName,8,Bộ FCO FCO 477-7/243/1 TC Cầu Tỉnh Lộ 7
+FU_2090,14,DTCName,8,Bộ FCO TBA Nam Phong 2
+FU_2102,14,DTCName,8,Bộ FCO TBA Phong Thu
+FU_2109,14,DTCName,8,Bộ FCO TBA Phò Trạch 5
+FU_2110,14,DTCName,8,Bộ FCO TBA Nam Phong 1
+FU_2112,14,DTCName,8,Bộ FCO TBA Hưng Thái
+FU_2113,14,DTCName,8,FCO 477-7/84/25 Trạch Tả
+FU_2130,14,DTCName,8,Bộ FCO TBA Phò Trạch 3
+FU_2131,14,DTCName,8,Bộ FCO TBA Phò trạch 2
+FU_2143,14,DTCName,8,Bộ FCO TBA TC TRẠM 220KV
+FU_2151,14,DTCName,8,Bộ FCO TBA Vi Sinh 1
+FU_2152,14,DTCName,8,Bộ FCO TBA Phong Mỹ 3
+FU_2178,14,DTCName,8,Bộ FCO TBA Trạch Thượng
+FU_2184,14,DTCName,8,Bộ FCO TBA An Thôn
+FU_2190,14,DTCName,8,Bộ FCO TBA Huỳnh Trúc
+FU_2196,14,DTCName,8,Bộ FCO TBA Tây Phong
+FU_2197,14,DTCName,8,Bộ FCO TBA Phong Mỹ 5
+FU_2198,14,DTCName,8,Bộ FCO TBA Hạ Long
+FU_2209,14,DTCName,8,Bộ  FCO 477-7/346 Bảo Tồn Thiên Nhiên
+FU_2213,14,DTCName,8,Bộ FCO TBA Bắc Ô Lâu
+FU_2234,14,DTCName,8,Bộ FCO 477-7/85 Trạch Thượng
+FU_2239,14,DTCName,8,Bộ FCO TBA Bơm cấp nước Viglacera
+FU_2253,14,DTCName,8,Bộ FCO TBA Phò Trạch 1
+FU_2255,14,DTCName,8,Bộ FCO TBA TH Ga Phò Trạch
+FU_2256,14,DTCName,8,Bộ FCO TBA Phò trạch 4
+FU_2260,14,DTCName,8,Bộ FCO 477-7/302 Hạ Long
+FU_2262,14,DTCName,8,Bộ FCO 477-7/32 Phân Vi Sinh
+SW_1838,13,DTCName,8,471-7 Trạm sạc Vinfast
+SW_1840,13,DTCName,8,431-1 RMU Trạm sạc Vinfast
+SW_1904,13,DTCName,8,LBS 477-7/276 Tân Mỹ
+SW_1906,13,DTCName,8,LBS 477-7/262/10 Đông Thái
+SW_1907,13,DTCName,8,LBS 477-7/250 Huỳnh Trúc
+SW_1966,13,DTCName,8,RMU 431-3
+SW_1995,13,DTCName,8,LBS 477-7/91 Nam Phong
+SW_2051,13,DTCName,8,Ngăn 472-7
+SW_2062,13,DTCName,8,Ngăn 471-7
+SG_1820,8,DTCName,8,Bộ DCL 477-7/66 PHÒ TRẠCH
+SG_1887,8,DTCName,8,Bộ DCL 477-7/88 NAM PHONG
+SG_1893,8,DTCName,8,Bộ DCL 477-7/155 Phong Mỹ
+SG_1900,8,DTCName,8,Bộ DCL 477-7/31 TÂN LẬP

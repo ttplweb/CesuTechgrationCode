@@ -8,10 +8,27 @@ namespace TechGration.AppCode
 {
     class ConfigFileData
     {
+        public string tempkey { get; set; }
+        public string xmlPath { get; set; }
+        public string DTCSV_PATH { get; set; }
+        public string Meter_PATH { get; set; }
         public string ProjectPath { get; set; }
-
+        public string dtpath { get; set; }
+        public string ptpatdh { get; set; }
+        public string CircuitSource { get; set; }
+        public string CircuitSource1 { get; set; }
+        public string SwitchGear { get; set; }
+        public string SWITCH { get; set; }
+        public string HTSERVICEPOINT { get; set; }
+        public string LTSERVICEPOINT { get; set; }
+        public string CONSUMERINFO { get; set; }
+        public string HTCABLE { get; set; }
+        public string LTCABLE { get; set; }
+        public string BUSBAR { get; set; }
+        public string HTCONDUCTOR { get; set; }
+        public string LTCONDUCTOR { get; set; }
+        public string FUSE { get; set; }
         public string TotalCount { get; set; }
-
         public string FMEDirectory { get; set; }
 
         public string CymeDirectory { get; set; }
@@ -76,5 +93,19 @@ namespace TechGration.AppCode
 
         public string IND { get; set; }
 
+        public string txtproServer { get; set; }
+        public string txtproDatabaseName { get; set; }
+        public string txtproUser { get; set; }
+        public string txtpropassword { get; set; }
+        public string Pfordate { get; set; }
+        public string ptodate { get; set; }
+        public string pfromdate { get; set; }
+        public string Bfordate { get; set; }
+        public string Btodate { get; set; }
+        public string Bfromdate { get; set; }
+        public string checkpeak { get; set; }
+        public string checkmeter { get; set; }
+        public string TYPE1 { get; set; }
+          
     }
 }

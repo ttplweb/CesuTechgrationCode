@@ -1,0 +1,17 @@
+
+[SWITCH SETTING]
+FORMAT_SWITCHSETTING=SectionID,Location,EqID,DeviceNumber,DeviceStage,Flags,InitFromEquipFlags,CoordX,CoordY,ClosedPhase,Locked,RC,NStatus,PhPickup,GrdPickup,Alternate,PhAltPickup,GrdAltPickup,FromNodeID,FaultIndicator,Automated,SensorMode,Strategic,RestorationMode,ConnectionStatus,ByPassOnRestoration,Reversible
+
+OH_5571,S,22 KV_400A,SW_1893,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_4806,S,22 KV_400A,SW_1820,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5419,L,22 KV_400A,SW_1900,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5574,S,22 KV_400A,SW_1887,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+BB_5415,L,22 KV_200A,SW_1840,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5807,S,22 KV_630A,SW_1907,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5575,L,22 KV_630A,SW_1995,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5565,L,22 KV_630A,SW_1904,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+OH_5563,L,22 KV_630A,SW_1906,,0,0,0,0,0,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+BB_5400,L,22 KV_630A,SW_2062,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+BB_5403,L,22 KV_630A,SW_2051,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+BB_5418,L,22 KV_630A,SW_1838,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1
+BB_5402,L,22 KV_630A,SW_1966,,0,0,0,0,7,0,0,0,0,0,0,0,0,,1,0,0,0,0,0,0,1

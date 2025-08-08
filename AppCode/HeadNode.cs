@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.OleDb;
 using System.IO;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace TechGration.AppCode
     {
         public string net(string st, OleDbConnection conn)
         {
-            
+          
             string aa = "select * from TGSOURCE_HEADNODES";
             using (OleDbCommand cmd = new OleDbCommand(aa, conn))
             {
@@ -21,25 +22,31 @@ namespace TechGration.AppCode
                 try
                 {
                     OleDbDataReader reader = cmd.ExecuteReader();
-                   
+                    //DataTable dt = new DataTable();
+                    //dt.Load(reader);
+                    
+                    //conn.Close();
                     while (reader.Read())
-                    {
+                    {                    
                         tw.Write(reader["NetworkID"].ToString());
                         tw.WriteLine();
                     }
+                   
                     tw.Close();
-
                     reader.Close();
-                    conn.Close();
+                 
+              
                 }
                 catch (Exception ex)
                 {
+                  
                     tw.Close();
                 }
-
+            
                 return ("1");
+               
             }
-
+            
         }
     }
 }
